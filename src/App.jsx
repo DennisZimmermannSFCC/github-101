@@ -4,6 +4,7 @@ import HelloWorld from './presentations/HelloWorld'
 import WorkingLocally from './presentations/WorkingLocally'
 import Branches from './presentations/Branches'
 import ClaudeCode from './presentations/ClaudeCode'
+import HandsOnClaudeCode from './presentations/HandsOnClaudeCode'
 
 const presentations = [
   {
@@ -66,6 +67,18 @@ const presentations = [
     border: 'border-rose-500/30 hover:border-rose-500/60',
     component: ClaudeCode,
   },
+  {
+    id: 'hands-on-claude-code',
+    number: 6,
+    title: 'Hands-On: Build a Demo',
+    description: 'Follow along — build and share a real demo with Claude Code',
+    icon: '🛠️',
+    duration: '20 min',
+    slides: 13,
+    color: 'from-sky-400 to-indigo-400',
+    border: 'border-sky-500/30 hover:border-sky-500/60',
+    component: HandsOnClaudeCode,
+  },
 ]
 
 function HomePage({ onSelect }) {
@@ -81,7 +94,7 @@ function HomePage({ onSelect }) {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 max-w-4xl w-full">
+      <div className="grid md:grid-cols-3 gap-5 max-w-5xl w-full">
         {presentations.map((p) => (
           <button
             key={p.id}
