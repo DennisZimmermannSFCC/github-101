@@ -85,30 +85,19 @@ const slides = [
   },
 
   {
-    id: 'step-1-signup',
+    id: 'prerequisite',
     content: () => (
       <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-4xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
-          <span className="bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full text-sm font-mono">Step 1</span>
-          <h2 className="text-3xl font-bold">Create a GitHub account</h2>
+          <span className="bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full text-sm font-mono">Before we start</span>
+          <h2 className="text-3xl font-bold">You need a GitHub account</h2>
         </div>
         <div className="card mb-6">
-          <h3 className="highlight text-lg mb-3">What we do</h3>
-          <p className="text-gray-300 text-lg">Go to <span className="text-amber-400 font-mono">github.com</span> and sign up for a free account.</p>
-        </div>
-        <div className="card mb-6">
-          <h3 className="text-cyan-400 font-semibold text-lg mb-3">Why we do it</h3>
-          <p className="text-gray-400">GitHub is where your files will live. A free account gives you unlimited repositories — public or private.</p>
+          <p className="text-gray-300 text-lg">This tutorial uses the GitHub website. All you need is a free account at <span className="text-amber-400 font-mono">github.com</span>.</p>
         </div>
         <div className="card">
-          <h3 className="text-lg font-semibold mb-3 text-gray-200">Follow along</h3>
-          <ol className="space-y-2 text-gray-300">
-            <li><span className="highlight">1.</span> Open <span className="font-mono text-amber-400">github.com</span></li>
-            <li><span className="highlight">2.</span> Click "Sign up"</li>
-            <li><span className="highlight">3.</span> Enter your email, create a password, pick a username</li>
-            <li><span className="highlight">4.</span> Verify your email</li>
-          </ol>
-          <p className="text-gray-500 text-sm mt-4">Already have an account? Skip to the next step.</p>
+          <p className="text-gray-400">No account yet? Complete <span className="text-blue-400 font-semibold">GitHub Setup</span> (presentation 1) first — it walks you through creating one.</p>
+          <p className="text-gray-500 text-sm mt-3">No terminal or Git installation needed for this tutorial — everything happens in the browser.</p>
         </div>
       </div>
     ),

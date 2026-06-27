@@ -62,86 +62,27 @@ const slides = [
   {
     id: 'prerequisites',
     content: () => (
-      <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-5xl mx-auto">
-        <div className="flex items-center gap-3 mb-6">
-          <span className="bg-rose-500/20 text-rose-400 px-3 py-1 rounded-full text-sm font-mono">Setup 1</span>
-          <h2 className="text-3xl font-bold">Create accounts and install tools</h2>
-        </div>
-        <p className="text-gray-400 mb-6">One-time setup. Takes about 10 minutes.</p>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="space-y-4">
-            <div className="card">
-              <h3 className="text-rose-400 font-semibold mb-2">1. GitHub account</h3>
-              <p className="text-gray-400 text-sm">Go to <span className="text-rose-400 font-mono">github.com</span> → Sign up (free)</p>
-              <p className="text-gray-500 text-xs mt-1">This is where your demos will live online.</p>
-            </div>
-            <div className="card">
-              <h3 className="text-rose-400 font-semibold mb-2">2. Install Git</h3>
-              <div className="code-block !p-3 text-sm">
-                <p className="text-gray-500">Mac:</p>
-                <p className="text-rose-400">xcode-select --install</p>
-                <p className="text-gray-500 mt-2">Windows:</p>
-                <p className="text-gray-400">Download from git-scm.com</p>
-              </div>
-            </div>
-          </div>
-          <div className="space-y-4">
-            <div className="card">
-              <h3 className="text-rose-400 font-semibold mb-2">3. Install Node.js</h3>
-              <p className="text-gray-400 text-sm">Download from <span className="text-rose-400 font-mono">nodejs.org</span> (LTS version)</p>
-              <p className="text-gray-500 text-xs mt-1">Needed to run Claude Code and JavaScript demos.</p>
-            </div>
-            <div className="card">
-              <h3 className="text-rose-400 font-semibold mb-2">4. Install Claude Code</h3>
-              <div className="code-block !p-3 text-sm">
-                <p className="text-rose-400">npm install -g @anthropic-ai/claude-code</p>
-              </div>
-              <p className="text-gray-500 text-xs mt-2">Needs an Anthropic API key or Max subscription.</p>
-            </div>
-            <div className="card">
-              <h3 className="text-rose-400 font-semibold mb-2">5. Install GitHub CLI</h3>
-              <div className="code-block !p-3 text-sm">
-                <p className="text-gray-500">Mac:</p>
-                <p className="text-rose-400">brew install gh</p>
-                <p className="text-gray-500 mt-1">Then:</p>
-                <p className="text-rose-400">gh auth login</p>
-              </div>
-              <p className="text-gray-500 text-xs mt-2">Lets Claude Code create repos and PRs for you.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    ),
-  },
-
-  {
-    id: 'verify-setup',
-    content: () => (
       <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-4xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
-          <span className="bg-rose-500/20 text-rose-400 px-3 py-1 rounded-full text-sm font-mono">Setup 2</span>
-          <h2 className="text-3xl font-bold">Verify everything works</h2>
+          <span className="bg-rose-500/20 text-rose-400 px-3 py-1 rounded-full text-sm font-mono">Before we start</span>
+          <h2 className="text-3xl font-bold">Prerequisites</h2>
         </div>
         <div className="card mb-6">
-          <h3 className="text-rose-400 font-semibold text-lg mb-3">Open your terminal and run these</h3>
-          <div className="code-block">
-            <p className="text-rose-400">git --version</p>
-            <p className="text-gray-500"># git version 2.x.x ✓</p>
-            <p className="text-rose-400 mt-3">node --version</p>
-            <p className="text-gray-500"># v20.x.x or higher ✓</p>
-            <p className="text-rose-400 mt-3">gh --version</p>
-            <p className="text-gray-500"># gh version 2.x.x ✓</p>
-            <p className="text-rose-400 mt-3">claude --version</p>
-            <p className="text-gray-500"># claude-code x.x.x ✓</p>
-          </div>
+          <p className="text-gray-300 text-lg mb-4">You need everything from <span className="text-blue-400 font-semibold">GitHub Setup</span> (presentation 1), plus two more tools:</p>
+          <ul className="space-y-2 text-gray-300">
+            <li className="flex gap-2"><span className="text-emerald-400">✓</span> GitHub account, Git, GitHub CLI (from GitHub Setup)</li>
+            <li className="flex gap-2"><span className="text-rose-400 font-semibold">+</span> Node.js — download from <span className="text-rose-400 font-mono">nodejs.org</span> (LTS version)</li>
+            <li className="flex gap-2"><span className="text-rose-400 font-semibold">+</span> Claude Code — <code className="bg-gray-700 px-1 rounded">npm install -g @anthropic-ai/claude-code</code></li>
+          </ul>
         </div>
         <div className="card">
-          <h3 className="text-lg font-semibold mb-2 text-gray-200">Configure Git identity</h3>
+          <h3 className="text-gray-200 font-semibold mb-2">Verify</h3>
           <div className="code-block !p-3 text-sm">
-            <p className="text-rose-400">git config --global user.name "Your Name"</p>
-            <p className="text-rose-400">git config --global user.email "you@company.com"</p>
+            <p className="text-rose-400">node --version</p>
+            <p className="text-gray-500"># v20.x.x or higher ✓</p>
+            <p className="text-rose-400 mt-2">claude --version</p>
+            <p className="text-gray-500"># claude-code x.x.x ✓</p>
           </div>
-          <p className="text-gray-500 text-xs mt-2">Use the same email as your GitHub account. One-time setup.</p>
         </div>
       </div>
     ),

@@ -60,77 +60,24 @@ const slides = [
   },
 
   {
-    id: 'install-git',
-    content: () => (
-      <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-5xl mx-auto">
-        <div className="flex items-center gap-3 mb-6">
-          <span className="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-sm font-mono">Step 1</span>
-          <h2 className="text-3xl font-bold">Install Git</h2>
-        </div>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <div className="card mb-4">
-              <h3 className="text-violet-400 font-semibold text-lg mb-3">What we do</h3>
-              <p className="text-gray-300">Install Git on your computer. Git is the tool that tracks changes — GitHub is just where they're stored online.</p>
-            </div>
-            <div className="card">
-              <h3 className="text-cyan-400 font-semibold text-lg mb-3">Why we do it</h3>
-              <p className="text-gray-400">Git runs on your machine and handles all the versioning. Without it, you can't clone, commit, or push.</p>
-            </div>
-          </div>
-          <div className="card">
-            <h3 className="text-lg font-semibold mb-4 text-gray-200">Choose your system</h3>
-            <div className="space-y-4">
-              <div>
-                <p className="text-gray-300 font-mono text-sm mb-1">Mac</p>
-                <div className="code-block !p-3">
-                  <p className="text-violet-400">xcode-select --install</p>
-                </div>
-              </div>
-              <div>
-                <p className="text-gray-300 font-mono text-sm mb-1">Windows</p>
-                <p className="text-gray-400 text-sm">Download from <span className="text-violet-400">git-scm.com</span></p>
-                <p className="text-gray-500 text-sm">Install with default settings</p>
-              </div>
-              <div>
-                <p className="text-gray-300 font-mono text-sm mb-1">Verify it works</p>
-                <div className="code-block !p-3">
-                  <p className="text-violet-400">git --version</p>
-                  <p className="text-gray-500"># git version 2.x.x</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    ),
-  },
-
-  {
-    id: 'configure-git',
+    id: 'prerequisite',
     content: () => (
       <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-4xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
-          <span className="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-sm font-mono">Step 2</span>
-          <h2 className="text-3xl font-bold">Configure your identity</h2>
+          <span className="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-sm font-mono">Before we start</span>
+          <h2 className="text-3xl font-bold">Prerequisites</h2>
         </div>
         <div className="card mb-6">
-          <h3 className="text-violet-400 font-semibold text-lg mb-3">What we do</h3>
-          <p className="text-gray-300 mb-4">Tell Git who you are. This name and email appear on every commit you make.</p>
-          <div className="code-block">
-            <p className="text-violet-400">git config --global user.name "Your Name"</p>
-            <p className="text-violet-400 mt-1">git config --global user.email "you@example.com"</p>
-          </div>
+          <p className="text-gray-300 text-lg">This tutorial uses the terminal and Git commands. You need:</p>
+          <ul className="mt-4 space-y-2 text-gray-300">
+            <li className="flex gap-2"><span className="text-emerald-400">✓</span> Git installed</li>
+            <li className="flex gap-2"><span className="text-emerald-400">✓</span> Git identity configured</li>
+            <li className="flex gap-2"><span className="text-emerald-400">✓</span> GitHub account</li>
+            <li className="flex gap-2"><span className="text-emerald-400">✓</span> A repository on GitHub (from the Hello World tutorial)</li>
+          </ul>
         </div>
         <div className="card">
-          <h3 className="text-cyan-400 font-semibold text-lg mb-3">Why we do it</h3>
-          <p className="text-gray-400 mb-3">
-            Every commit is signed with a name and email. This is how your team knows who made which change.
-            Use the same email as your GitHub account so commits link to your profile.
-          </p>
-          <div className="bg-gray-900 rounded-lg p-3 text-sm">
-            <p className="text-gray-400">You only do this once. Git remembers it for all future projects.</p>
-          </div>
+          <p className="text-gray-400">Not set up yet? Complete <span className="text-blue-400 font-semibold">GitHub Setup</span> (presentation 1) first.</p>
         </div>
       </div>
     ),
@@ -141,7 +88,7 @@ const slides = [
     content: () => (
       <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-5xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
-          <span className="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-sm font-mono">Step 3</span>
+          <span className="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-sm font-mono">Step 1</span>
           <h2 className="text-3xl font-bold">Clone the repository</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
@@ -187,7 +134,7 @@ const slides = [
     content: () => (
       <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-5xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
-          <span className="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-sm font-mono">Step 4</span>
+          <span className="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-sm font-mono">Step 2</span>
           <h2 className="text-3xl font-bold">Edit files locally</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
@@ -235,7 +182,7 @@ const slides = [
     content: () => (
       <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-4xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
-          <span className="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-sm font-mono">Step 5</span>
+          <span className="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-sm font-mono">Step 3</span>
           <h2 className="text-3xl font-bold">Check what changed</h2>
         </div>
         <div className="card mb-6">
@@ -274,7 +221,7 @@ const slides = [
     content: () => (
       <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-4xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
-          <span className="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-sm font-mono">Step 6</span>
+          <span className="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-sm font-mono">Step 4</span>
           <h2 className="text-3xl font-bold">Stage your changes</h2>
         </div>
         <div className="card mb-6">
@@ -319,7 +266,7 @@ const slides = [
     content: () => (
       <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-4xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
-          <span className="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-sm font-mono">Step 7</span>
+          <span className="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-sm font-mono">Step 5</span>
           <h2 className="text-3xl font-bold">Commit — save a snapshot</h2>
         </div>
         <div className="card mb-6">
@@ -359,7 +306,7 @@ const slides = [
     content: () => (
       <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-4xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
-          <span className="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-sm font-mono">Step 8</span>
+          <span className="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-sm font-mono">Step 6</span>
           <h2 className="text-3xl font-bold">Push to GitHub</h2>
         </div>
         <div className="card mb-6">
@@ -402,7 +349,7 @@ const slides = [
     content: () => (
       <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-4xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
-          <span className="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-sm font-mono">Step 9</span>
+          <span className="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-sm font-mono">Step 7</span>
           <h2 className="text-3xl font-bold">Pull — get changes from others</h2>
         </div>
         <div className="card mb-6">
