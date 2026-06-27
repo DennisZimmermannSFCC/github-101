@@ -84,31 +84,47 @@ const slides = [
     id: 'demo-asset-problem',
     content: () => (
       <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold mb-8">The demo asset problem</h2>
-        <div className="card mb-6">
-          <h3 className="text-xl font-semibold text-red-400 mb-4">Sound familiar?</h3>
-          <div className="code-block text-gray-400">
-            <p>📁 Desktop/</p>
-            <p className="ml-4">📁 demo-final/</p>
-            <p className="ml-4">📁 demo-final-v2/</p>
-            <p className="ml-4">📁 demo-ACTUAL-final/</p>
-            <p className="ml-4">📁 demo-for-acme-corp/</p>
-            <p className="ml-4">📁 demo-copy-from-sarah/</p>
-            <p className="ml-4">📄 demo-script-old.docx</p>
+        <h2 className="text-4xl font-bold mb-6">The demo asset problem</h2>
+        <p className="text-gray-400 text-lg mb-6">You built a great demo. Now what?</p>
+        <div className="grid md:grid-cols-2 gap-6 mb-6">
+          <div className="card">
+            <h3 className="text-xl font-semibold text-red-400 mb-4">Sharing is broken</h3>
+            <ul className="space-y-3 text-gray-300">
+              <li>• "Can you send me your demo?" → email attachment, outdated by tomorrow</li>
+              <li>• Colleague improves it → you never get those improvements back</li>
+              <li>• Two people edit the same script → someone's work gets lost</li>
+              <li>• New team member joins → "ask Sarah, she has the latest... maybe"</li>
+            </ul>
+          </div>
+          <div className="card">
+            <h3 className="text-xl font-semibold text-red-400 mb-4">Files are chaos</h3>
+            <div className="code-block text-gray-400 text-sm">
+              <p>📁 Desktop/</p>
+              <p className="ml-4">📁 demo-final/</p>
+              <p className="ml-4">📁 demo-final-v2/</p>
+              <p className="ml-4">📁 demo-ACTUAL-final/</p>
+              <p className="ml-4">📁 demo-for-acme-corp/</p>
+              <p className="ml-4">📁 demo-copy-from-sarah/</p>
+              <p className="ml-4">📄 demo-script-old.docx</p>
+            </div>
           </div>
         </div>
-        <div className="grid md:grid-cols-3 gap-4">
-          <div className="card text-center">
-            <p className="text-3xl mb-2">🔍</p>
-            <p className="text-gray-300">Can't find the latest version</p>
+        <div className="grid md:grid-cols-4 gap-3">
+          <div className="card text-center !p-4">
+            <p className="text-2xl mb-1">🔍</p>
+            <p className="text-gray-400 text-xs">Can't find the latest</p>
           </div>
-          <div className="card text-center">
-            <p className="text-3xl mb-2">🤝</p>
-            <p className="text-gray-300">Hard to share improvements</p>
+          <div className="card text-center !p-4">
+            <p className="text-2xl mb-1">📧</p>
+            <p className="text-gray-400 text-xs">Sharing by email fails</p>
           </div>
-          <div className="card text-center">
-            <p className="text-3xl mb-2">💥</p>
-            <p className="text-gray-300">Changes overwrite each other</p>
+          <div className="card text-center !p-4">
+            <p className="text-2xl mb-1">💥</p>
+            <p className="text-gray-400 text-xs">Changes overwrite each other</p>
+          </div>
+          <div className="card text-center !p-4">
+            <p className="text-2xl mb-1">🚪</p>
+            <p className="text-gray-400 text-xs">New people can't onboard</p>
           </div>
         </div>
       </div>
