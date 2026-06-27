@@ -6,6 +6,7 @@ import GitHub104 from './presentations/GitHub104'
 import HelloWorld from './presentations/HelloWorld'
 import WorkingLocally from './presentations/WorkingLocally'
 import Branches from './presentations/Branches'
+import Issues from './presentations/Issues'
 import ClaudeCode from './presentations/ClaudeCode'
 import HandsOnClaudeCode from './presentations/HandsOnClaudeCode'
 
@@ -121,6 +122,17 @@ const sections = [
         color: 'from-teal-400 to-emerald-400',
         border: 'border-teal-500/30 hover:border-teal-500/60',
         component: Branches,
+      },
+      {
+        id: 'issues',
+        title: 'Issues',
+        description: 'Track ideas, tasks, and bugs — your team\'s to-do list',
+        icon: '🎯',
+        duration: '8 min',
+        slides: 9,
+        color: 'from-orange-400 to-red-400',
+        border: 'border-orange-500/30 hover:border-orange-500/60',
+        component: Issues,
       },
       {
         id: 'claude-code',
