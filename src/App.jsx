@@ -9,6 +9,7 @@ import Branches from './presentations/Branches'
 import Issues from './presentations/Issues'
 import HandsOnIssues from './presentations/HandsOnIssues'
 import HandsOnIssuesCLI from './presentations/HandsOnIssuesCLI'
+import HandsOnIssuesClaude from './presentations/HandsOnIssuesClaude'
 import ClaudeCode from './presentations/ClaudeCode'
 import HandsOnClaudeCode from './presentations/HandsOnClaudeCode'
 
@@ -157,6 +158,17 @@ const sections = [
         color: 'from-orange-400 to-red-400',
         border: 'border-red-500/30 hover:border-red-500/60',
         component: HandsOnIssuesCLI,
+      },
+      {
+        id: 'hands-on-issues-claude',
+        title: 'Hands-On: Issues (Claude)',
+        description: 'Same exercise by talking to Claude Code',
+        icon: '🤖',
+        duration: '5 min',
+        slides: 6,
+        color: 'from-orange-400 to-rose-400',
+        border: 'border-rose-500/30 hover:border-rose-500/60',
+        component: HandsOnIssuesClaude,
       },
       {
         id: 'claude-code',
