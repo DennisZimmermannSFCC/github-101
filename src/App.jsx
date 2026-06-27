@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import GitHubSetup from './presentations/GitHubSetup'
 import GitHub101 from './presentations/GitHub101'
 import HelloWorld from './presentations/HelloWorld'
 import WorkingLocally from './presentations/WorkingLocally'
@@ -8,8 +9,20 @@ import HandsOnClaudeCode from './presentations/HandsOnClaudeCode'
 
 const presentations = [
   {
-    id: 'hello-world',
+    id: 'github-setup',
     number: 1,
+    title: 'GitHub Setup',
+    description: 'Install everything you need — one-time setup',
+    icon: '⚙️',
+    duration: '15 min',
+    slides: 9,
+    color: 'from-blue-400 to-sky-400',
+    border: 'border-blue-500/30 hover:border-blue-500/60',
+    component: GitHubSetup,
+  },
+  {
+    id: 'hello-world',
+    number: 2,
     title: 'Hello World',
     description: 'Your very first GitHub repository — no experience needed',
     icon: '👋',
@@ -21,7 +34,7 @@ const presentations = [
   },
   {
     id: 'working-locally',
-    number: 2,
+    number: 3,
     title: 'Working Locally',
     description: 'Clone, edit, commit, and push from your own machine',
     icon: '💻',
@@ -33,7 +46,7 @@ const presentations = [
   },
   {
     id: 'branches',
-    number: 3,
+    number: 4,
     title: 'Branches',
     description: 'Work on changes without breaking what already works',
     icon: '🌿',
@@ -45,7 +58,7 @@ const presentations = [
   },
   {
     id: 'github-101',
-    number: 4,
+    number: 5,
     title: 'GitHub 101',
     description: 'Store, reuse, improve, and share your demo assets',
     icon: '📦',
@@ -57,7 +70,7 @@ const presentations = [
   },
   {
     id: 'claude-code',
-    number: 5,
+    number: 6,
     title: 'Claude Code + GitHub',
     description: 'Build complex demos with AI — from zero to shared with your team',
     icon: '🤖',
@@ -69,7 +82,7 @@ const presentations = [
   },
   {
     id: 'hands-on-claude-code',
-    number: 6,
+    number: 7,
     title: 'Hands-On: Hello World',
     description: 'Follow along — create your first repo with Claude Code',
     icon: '🛠️',
