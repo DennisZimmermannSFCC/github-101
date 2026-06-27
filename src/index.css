@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100 antialiased;
+  }
+}
+
+@layer components {
+  .slide-enter {
+    animation: slideIn 0.3s ease-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .code-block {
+    @apply bg-gray-900 border border-gray-700 rounded-lg p-4 font-mono text-sm leading-relaxed;
+  }
+
+  .card {
+    @apply bg-gray-800/50 border border-gray-700/50 rounded-xl p-6 backdrop-blur-sm;
+  }
+
+  .highlight {
+    @apply text-emerald-400 font-semibold;
+  }
+}
