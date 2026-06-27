@@ -1,4 +1,5 @@
 import SlideViewer from '../components/SlideViewer'
+import CopyButton from '../components/CopyButton'
 
 const slides = [
   {
@@ -69,7 +70,8 @@ const slides = [
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <h3 className="text-emerald-400 font-semibold text-lg mb-3">What we do</h3>
-            <div className="code-block text-sm">
+            <div className="code-block text-sm relative">
+              <CopyButton text={"# Commerce Agent Demo\n\nA reusable demo showing AI-powered commerce agent capabilities.\n\n## Quick Start\n1. Clone this repo\n2. Follow setup/setup-instructions.md\n3. Run through demo-script/main-demo-flow.md\n\n## Who is this for?\nPre-sales engineers demoing commerce agent features to retail customers."} />
               <p className="text-cyan-400"># Commerce Agent Demo</p>
               <p className="text-gray-400 mt-2">A reusable demo showing AI-powered</p>
               <p className="text-gray-400">commerce agent capabilities.</p>
@@ -115,7 +117,8 @@ const slides = [
           <div>
             <h3 className="text-emerald-400 font-semibold text-lg mb-3">What we do</h3>
             <p className="text-gray-400 mb-3">Create <code className="bg-gray-700 px-1 rounded">demo-script/main-demo-flow.md</code></p>
-            <div className="code-block text-sm">
+            <div className="code-block text-sm relative">
+              <CopyButton text={"# Main Demo Flow\n\n## Opening (2 min)\n- Show the storefront\n- Introduce the AI agent concept\n\n## Core Demo (8 min)\n- Customer asks agent for recommendations\n- Agent searches product catalog\n- Agent handles checkout questions\n\n## Closing (2 min)\n- Recap key capabilities\n- Next steps discussion"} />
               <p className="text-cyan-400"># Main Demo Flow</p>
               <p className="text-gray-400 mt-2">## Opening (2 min)</p>
               <p className="text-gray-400">- Show the storefront</p>
@@ -162,7 +165,8 @@ const slides = [
           <div>
             <h3 className="text-emerald-400 font-semibold text-lg mb-3">What we do</h3>
             <p className="text-gray-400 mb-3">Create <code className="bg-gray-700 px-1 rounded">setup/setup-instructions.md</code></p>
-            <div className="code-block text-sm">
+            <div className="code-block text-sm relative">
+              <CopyButton text={"# Setup Instructions\n\n## Prerequisites\n- Access to Commerce Cloud sandbox\n- Agent API credentials (see vault)\n\n## Steps\n1. Clone this repository\n2. Import sample-data/example-products.csv\n3. Configure agent endpoint in settings\n4. Run a test query to verify\n\n## Troubleshooting\n- If agent times out: check VPN connection"} />
               <p className="text-cyan-400"># Setup Instructions</p>
               <p className="text-gray-400 mt-2">## Prerequisites</p>
               <p className="text-gray-400">- Access to Commerce Cloud sandbox</p>

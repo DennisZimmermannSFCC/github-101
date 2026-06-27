@@ -1,4 +1,5 @@
 import SlideViewer from '../components/SlideViewer'
+import CopyButton from '../components/CopyButton'
 
 const slides = [
   {
@@ -36,7 +37,8 @@ const slides = [
         </div>
         <div className="card mb-6">
           <h3 className="text-sky-400 font-semibold text-lg mb-3">Open your terminal and type</h3>
-          <div className="code-block text-lg">
+          <div className="code-block relative">
+            <CopyButton text={"mkdir my-hello-world\ncd my-hello-world\nclaude"} />
             <p className="text-sky-400">mkdir my-hello-world</p>
             <p className="text-sky-400">cd my-hello-world</p>
             <p className="text-sky-400">claude</p>
@@ -60,7 +62,8 @@ const slides = [
         </div>
         <div className="card mb-6">
           <h3 className="text-sky-400 font-semibold text-lg mb-3">Say this to Claude Code</h3>
-          <div className="code-block">
+          <div className="code-block relative">
+            <CopyButton text={"Create two files:\n\n1. README.md — explain that this is my first repo, what's inside, and that I'm learning GitHub.\n\n2. demo-script.md — a short demo talk track with an opening, a main section, and a closing."} />
             <p className="text-gray-200 italic">"Create two files:</p>
             <p className="text-gray-200 italic mt-2">1. README.md — explain that this is my first repo,</p>
             <p className="text-gray-200 italic">   what's inside, and that I'm learning GitHub.</p>
@@ -85,7 +88,8 @@ const slides = [
         </div>
         <div className="card mb-6">
           <h3 className="text-sky-400 font-semibold text-lg mb-3">Say this to Claude Code</h3>
-          <div className="code-block text-lg">
+          <div className="code-block text-lg relative">
+            <CopyButton text={"Create a private GitHub repo called my-hello-world, commit everything, and push."} />
             <p className="text-gray-200 italic">"Create a private GitHub repo called my-hello-world,</p>
             <p className="text-gray-200 italic">commit everything, and push."</p>
           </div>
@@ -116,7 +120,8 @@ const slides = [
         </div>
         <div className="card mb-6">
           <h3 className="text-sky-400 font-semibold text-lg mb-3">Say this to Claude Code</h3>
-          <div className="code-block text-lg">
+          <div className="code-block text-lg relative">
+            <CopyButton text={"Add a tips section to the demo script with 3 tips for a good demo. Commit and push."} />
             <p className="text-gray-200 italic">"Add a tips section to the demo script with</p>
             <p className="text-gray-200 italic">3 tips for a good demo. Commit and push."</p>
           </div>
