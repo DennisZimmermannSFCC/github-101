@@ -8,6 +8,7 @@ import WorkingLocally from './presentations/WorkingLocally'
 import Branches from './presentations/Branches'
 import Issues from './presentations/Issues'
 import HandsOnIssues from './presentations/HandsOnIssues'
+import HandsOnIssuesCLI from './presentations/HandsOnIssuesCLI'
 import ClaudeCode from './presentations/ClaudeCode'
 import HandsOnClaudeCode from './presentations/HandsOnClaudeCode'
 
@@ -145,6 +146,17 @@ const sections = [
         color: 'from-orange-400 to-amber-400',
         border: 'border-amber-500/30 hover:border-amber-500/60',
         component: HandsOnIssues,
+      },
+      {
+        id: 'hands-on-issues-cli',
+        title: 'Hands-On: Issues (CLI)',
+        description: 'Same exercise from the terminal with gh commands',
+        icon: '💻',
+        duration: '5 min',
+        slides: 7,
+        color: 'from-orange-400 to-red-400',
+        border: 'border-red-500/30 hover:border-red-500/60',
+        component: HandsOnIssuesCLI,
       },
       {
         id: 'claude-code',
