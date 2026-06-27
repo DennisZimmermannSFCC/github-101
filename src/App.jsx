@@ -9,8 +9,20 @@ import HandsOnClaudeCode from './presentations/HandsOnClaudeCode'
 
 const presentations = [
   {
-    id: 'github-setup',
+    id: 'github-101',
     number: 1,
+    title: 'GitHub 101',
+    description: 'Store, reuse, improve, and share your demo assets',
+    icon: '📦',
+    duration: '20 min',
+    slides: 16,
+    color: 'from-emerald-400 to-cyan-400',
+    border: 'border-emerald-500/30 hover:border-emerald-500/60',
+    component: GitHub101,
+  },
+  {
+    id: 'github-setup',
+    number: 2,
     title: 'GitHub Setup',
     description: 'Install everything you need — one-time setup',
     icon: '⚙️',
@@ -22,7 +34,7 @@ const presentations = [
   },
   {
     id: 'hello-world',
-    number: 2,
+    number: 3,
     title: 'Hello World',
     description: 'Your very first GitHub repository — no experience needed',
     icon: '👋',
@@ -34,7 +46,7 @@ const presentations = [
   },
   {
     id: 'working-locally',
-    number: 3,
+    number: 4,
     title: 'Working Locally',
     description: 'Clone, edit, commit, and push from your own machine',
     icon: '💻',
@@ -46,7 +58,7 @@ const presentations = [
   },
   {
     id: 'branches',
-    number: 4,
+    number: 5,
     title: 'Branches',
     description: 'Work on changes without breaking what already works',
     icon: '🌿',
@@ -55,18 +67,6 @@ const presentations = [
     color: 'from-teal-400 to-emerald-400',
     border: 'border-teal-500/30 hover:border-teal-500/60',
     component: Branches,
-  },
-  {
-    id: 'github-101',
-    number: 5,
-    title: 'GitHub 101',
-    description: 'Store, reuse, improve, and share your demo assets',
-    icon: '📦',
-    duration: '20 min',
-    slides: 16,
-    color: 'from-emerald-400 to-cyan-400',
-    border: 'border-emerald-500/30 hover:border-emerald-500/60',
-    component: GitHub101,
   },
   {
     id: 'claude-code',
