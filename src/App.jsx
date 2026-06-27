@@ -7,6 +7,7 @@ import Branches from './presentations/Branches'
 const presentations = [
   {
     id: 'hello-world',
+    number: 1,
     title: 'Hello World',
     description: 'Your very first GitHub repository — no experience needed',
     icon: '👋',
@@ -18,6 +19,7 @@ const presentations = [
   },
   {
     id: 'working-locally',
+    number: 2,
     title: 'Working Locally',
     description: 'Clone, edit, commit, and push from your own machine',
     icon: '💻',
@@ -29,6 +31,7 @@ const presentations = [
   },
   {
     id: 'branches',
+    number: 3,
     title: 'Branches',
     description: 'Work on changes without breaking what already works',
     icon: '🌿',
@@ -40,6 +43,7 @@ const presentations = [
   },
   {
     id: 'github-101',
+    number: 4,
     title: 'GitHub 101',
     description: 'Store, reuse, improve, and share your demo assets',
     icon: '📦',
@@ -69,8 +73,9 @@ function HomePage({ onSelect }) {
           <button
             key={p.id}
             onClick={() => onSelect(p.id)}
-            className={`card text-left border ${p.border} transition-all duration-200 hover:scale-[1.02] hover:bg-gray-800/70 cursor-pointer group`}
+            className={`card text-left border ${p.border} transition-all duration-200 hover:scale-[1.02] hover:bg-gray-800/70 cursor-pointer group relative`}
           >
+            <span className="absolute top-4 right-4 text-xs font-mono text-gray-600">{p.number}/4</span>
             <div className="text-4xl mb-4">{p.icon}</div>
             <h2 className={`text-2xl font-bold mb-2 bg-gradient-to-r ${p.color} bg-clip-text text-transparent`}>
               {p.title}
