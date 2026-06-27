@@ -111,11 +111,41 @@ const slides = [
   },
 
   {
-    id: 'step-4',
+    id: 'step-check',
     content: () => (
       <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-4xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
           <span className="bg-sky-500/20 text-sky-400 px-3 py-1 rounded-full text-sm font-mono">Step 4</span>
+          <h2 className="text-3xl font-bold">Check it on GitHub</h2>
+        </div>
+        <div className="card mb-6">
+          <h3 className="text-sky-400 font-semibold text-lg mb-3">Open your repo in the browser</h3>
+          <p className="text-gray-300 mb-3">Claude Code showed you a URL. Open it — or go to:</p>
+          <div className="code-block text-lg relative">
+            <p className="text-sky-400">https://github.com/YOUR-USERNAME/my-hello-world</p>
+          </div>
+        </div>
+        <div className="card mb-6">
+          <h3 className="text-gray-200 font-semibold mb-3">You should see</h3>
+          <div className="space-y-2 text-sm text-gray-300">
+            <p className="flex gap-2"><span className="text-emerald-400">✓</span> Your README.md rendered nicely as the front page</p>
+            <p className="flex gap-2"><span className="text-emerald-400">✓</span> demo-script.md listed as a file</p>
+            <p className="flex gap-2"><span className="text-emerald-400">✓</span> "1 commit" in the top area</p>
+          </div>
+        </div>
+        <div className="card">
+          <p className="text-gray-400">This is your project's home. Anything you push shows up here. Anyone you invite can see it.</p>
+        </div>
+      </div>
+    ),
+  },
+
+  {
+    id: 'step-5',
+    content: () => (
+      <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-4xl mx-auto">
+        <div className="flex items-center gap-3 mb-6">
+          <span className="bg-sky-500/20 text-sky-400 px-3 py-1 rounded-full text-sm font-mono">Step 5</span>
           <h2 className="text-3xl font-bold">Make a change</h2>
         </div>
         <div className="card mb-6">
@@ -134,11 +164,11 @@ const slides = [
   },
 
   {
-    id: 'step-5',
+    id: 'step-6',
     content: () => (
       <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-4xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
-          <span className="bg-sky-500/20 text-sky-400 px-3 py-1 rounded-full text-sm font-mono">Step 5</span>
+          <span className="bg-sky-500/20 text-sky-400 px-3 py-1 rounded-full text-sm font-mono">Step 6</span>
           <h2 className="text-3xl font-bold">Undo the change</h2>
         </div>
         <div className="card mb-6">
