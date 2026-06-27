@@ -212,9 +212,9 @@ const slides = [
   {
     id: 'typical-flow',
     content: () => (
-      <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-3xl mx-auto">
-        <h2 className="text-4xl font-bold mb-8">The daily workflow</h2>
-        <div className="flex items-start justify-center gap-4">
+      <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-5xl mx-auto">
+        <h2 className="text-4xl font-bold mb-6">The daily workflow</h2>
+        <div className="grid md:grid-cols-2 gap-8">
           <div className="flex flex-col items-center gap-2">
             {[
               { step: 'Edit files', color: 'text-violet-400' },
@@ -223,26 +223,37 @@ const slides = [
               { step: 'git commit', color: 'text-emerald-400' },
               { step: 'git push', color: 'text-amber-400' },
             ].map((item, i) => (
-              <div key={item.step} className="w-full max-w-sm">
-                <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg px-6 py-3 text-center">
+              <div key={item.step} className="w-full max-w-xs">
+                <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg px-5 py-2.5 text-center">
                   <span className={`font-mono font-semibold ${item.color}`}>{item.step}</span>
                 </div>
-                {i < 4 && <div className="text-center text-gray-700 text-lg">↓</div>}
+                {i < 4 && <div className="text-center text-gray-700">↓</div>}
               </div>
             ))}
+            <div className="text-center text-amber-400 text-sm mt-1">↻ back to editing</div>
           </div>
-          <div className="hidden md:flex flex-col items-center justify-between h-full pt-2 pb-2">
-            <span className="text-gray-700 text-sm">╭</span>
-            <div className="w-px h-full border-l border-dashed border-gray-700"></div>
-            <span className="text-gray-700 text-sm">╰</span>
+          <div className="space-y-4">
+            <div className="card !py-3">
+              <p className="text-violet-400 font-semibold text-sm">Edit files</p>
+              <p className="text-gray-400 text-sm">Make changes in your editor — code, docs, anything</p>
+            </div>
+            <div className="card !py-3">
+              <p className="text-cyan-400 font-semibold text-sm">git status</p>
+              <p className="text-gray-400 text-sm">Check what changed — no surprises before saving</p>
+            </div>
+            <div className="card !py-3">
+              <p className="text-teal-400 font-semibold text-sm">git add</p>
+              <p className="text-gray-400 text-sm">Stage the files you want to include in this save</p>
+            </div>
+            <div className="card !py-3">
+              <p className="text-emerald-400 font-semibold text-sm">git commit</p>
+              <p className="text-gray-400 text-sm">Save a snapshot with a message — a checkpoint you can return to</p>
+            </div>
+            <div className="card !py-3">
+              <p className="text-amber-400 font-semibold text-sm">git push</p>
+              <p className="text-gray-400 text-sm">Upload to GitHub — now it's backed up and shared with the team</p>
+            </div>
           </div>
-          <div className="hidden md:flex items-center text-gray-500 text-sm mt-auto mb-auto">
-            <span>↑ repeat</span>
-          </div>
-        </div>
-        <div className="code-block mt-8 max-w-sm mx-auto text-center text-sm">
-          <p className="text-gray-500">after push → back to editing</p>
-          <p className="text-amber-400 mt-1">↻ repeat for every change</p>
         </div>
       </div>
     ),
