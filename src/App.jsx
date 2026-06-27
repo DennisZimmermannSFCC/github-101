@@ -8,97 +8,102 @@ import Branches from './presentations/Branches'
 import ClaudeCode from './presentations/ClaudeCode'
 import HandsOnClaudeCode from './presentations/HandsOnClaudeCode'
 
-const presentations = [
+const sections = [
   {
-    id: 'github-101',
-    number: 1,
-    title: 'GitHub 101',
-    description: 'Why GitHub matters — concepts, structure, and good habits',
-    icon: '📦',
-    duration: '10 min',
-    slides: 8,
-    color: 'from-emerald-400 to-cyan-400',
-    border: 'border-emerald-500/30 hover:border-emerald-500/60',
-    component: GitHub101,
+    title: 'Getting Started',
+    items: [
+      {
+        id: 'github-101',
+        title: 'GitHub 101',
+        description: 'Why GitHub matters — concepts, structure, and good habits',
+        icon: '📦',
+        duration: '10 min',
+        slides: 8,
+        color: 'from-emerald-400 to-cyan-400',
+        border: 'border-emerald-500/30 hover:border-emerald-500/60',
+        component: GitHub101,
+      },
+      {
+        id: 'github-setup',
+        title: 'GitHub Setup',
+        description: 'Install everything you need — one-time setup',
+        icon: '⚙️',
+        duration: '15 min',
+        slides: 9,
+        color: 'from-blue-400 to-sky-400',
+        border: 'border-blue-500/30 hover:border-blue-500/60',
+        component: GitHubSetup,
+      },
+      {
+        id: 'github-102',
+        title: 'GitHub 102',
+        description: 'Hands-on: build a demo repository on github.com',
+        icon: '🚀',
+        duration: '15 min',
+        slides: 10,
+        color: 'from-emerald-400 to-teal-400',
+        border: 'border-teal-500/30 hover:border-teal-500/60',
+        component: GitHub102,
+      },
+      {
+        id: 'hands-on-claude-code',
+        title: 'Hands-On: Claude Code',
+        description: 'Follow along — create your first repo with Claude Code',
+        icon: '🛠️',
+        duration: '5 min',
+        slides: 6,
+        color: 'from-sky-400 to-indigo-400',
+        border: 'border-sky-500/30 hover:border-sky-500/60',
+        component: HandsOnClaudeCode,
+      },
+    ],
   },
   {
-    id: 'github-setup',
-    number: 2,
-    title: 'GitHub Setup',
-    description: 'Install everything you need — one-time setup',
-    icon: '⚙️',
-    duration: '15 min',
-    slides: 9,
-    color: 'from-blue-400 to-sky-400',
-    border: 'border-blue-500/30 hover:border-blue-500/60',
-    component: GitHubSetup,
-  },
-  {
-    id: 'github-102',
-    number: 3,
-    title: 'GitHub 102',
-    description: 'Hands-on: build a demo repository on github.com',
-    icon: '🚀',
-    duration: '15 min',
-    slides: 10,
-    color: 'from-emerald-400 to-teal-400',
-    border: 'border-teal-500/30 hover:border-teal-500/60',
-    component: GitHub102,
-  },
-  {
-    id: 'working-locally',
-    number: 4,
-    title: 'Working Locally',
-    description: 'Clone, edit, commit, and push from your own machine',
-    icon: '💻',
-    duration: '10 min',
-    slides: 11,
-    color: 'from-violet-400 to-fuchsia-400',
-    border: 'border-violet-500/30 hover:border-violet-500/60',
-    component: WorkingLocally,
-  },
-  {
-    id: 'branches',
-    number: 5,
-    title: 'Branches',
-    description: 'Work on changes without breaking what already works',
-    icon: '🌿',
-    duration: '10 min',
-    slides: 12,
-    color: 'from-teal-400 to-emerald-400',
-    border: 'border-teal-500/30 hover:border-teal-500/60',
-    component: Branches,
-  },
-  {
-    id: 'claude-code',
-    number: 6,
-    title: 'Claude Code + GitHub',
-    description: 'Build complex demos with AI — from zero to shared with your team',
-    icon: '🤖',
-    duration: '15 min',
-    slides: 11,
-    color: 'from-rose-400 to-pink-400',
-    border: 'border-rose-500/30 hover:border-rose-500/60',
-    component: ClaudeCode,
-  },
-  {
-    id: 'hands-on-claude-code',
-    number: 7,
-    title: 'Hands-On: Claude Code',
-    description: 'Follow along — create your first repo with Claude Code',
-    icon: '🛠️',
-    duration: '5 min',
-    slides: 6,
-    color: 'from-sky-400 to-indigo-400',
-    border: 'border-sky-500/30 hover:border-sky-500/60',
-    component: HandsOnClaudeCode,
+    title: 'Understanding More',
+    items: [
+      {
+        id: 'working-locally',
+        title: 'Working Locally',
+        description: 'Clone, edit, commit, and push from your own machine',
+        icon: '💻',
+        duration: '10 min',
+        slides: 11,
+        color: 'from-violet-400 to-fuchsia-400',
+        border: 'border-violet-500/30 hover:border-violet-500/60',
+        component: WorkingLocally,
+      },
+      {
+        id: 'branches',
+        title: 'Branches',
+        description: 'Work on changes without breaking what already works',
+        icon: '🌿',
+        duration: '10 min',
+        slides: 12,
+        color: 'from-teal-400 to-emerald-400',
+        border: 'border-teal-500/30 hover:border-teal-500/60',
+        component: Branches,
+      },
+      {
+        id: 'claude-code',
+        title: 'Claude Code + GitHub',
+        description: 'Build complex demos with AI — from zero to shared with your team',
+        icon: '🤖',
+        duration: '15 min',
+        slides: 11,
+        color: 'from-rose-400 to-pink-400',
+        border: 'border-rose-500/30 hover:border-rose-500/60',
+        component: ClaudeCode,
+      },
+    ],
   },
 ]
 
+const allPresentations = sections.flatMap((s) => s.items)
+
 function HomePage({ onSelect }) {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
-      <div className="text-center mb-12">
+    <div className="min-h-screen flex flex-col items-center px-6 py-12">
+      <div className="text-center mb-12 mt-8">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-100">
           GitHub for Pre-Sales
         </h1>
@@ -108,27 +113,35 @@ function HomePage({ onSelect }) {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-5 max-w-5xl w-full">
-        {presentations.map((p) => (
-          <button
-            key={p.id}
-            onClick={() => onSelect(p.id)}
-            className={`card text-left border ${p.border} transition-all duration-200 hover:scale-[1.02] hover:bg-gray-800/70 cursor-pointer group relative`}
-          >
-            <span className="absolute top-4 right-4 text-xs font-mono text-gray-600">{p.number}/{presentations.length}</span>
-            <div className="text-4xl mb-4">{p.icon}</div>
-            <h2 className={`text-2xl font-bold mb-2 bg-gradient-to-r ${p.color} bg-clip-text text-transparent`}>
-              {p.title}
+      <div className="max-w-5xl w-full space-y-10">
+        {sections.map((section, si) => (
+          <div key={section.title}>
+            <h2 className="text-sm font-mono uppercase tracking-wider text-gray-500 mb-4 px-1">
+              {si + 1}. {section.title}
             </h2>
-            <p className="text-gray-400 mb-4">{p.description}</p>
-            <div className="flex items-center gap-4 text-sm text-gray-500">
-              <span>{p.slides} slides</span>
-              <span>~{p.duration}</span>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {section.items.map((p) => (
+                <button
+                  key={p.id}
+                  onClick={() => onSelect(p.id)}
+                  className={`card text-left border ${p.border} transition-all duration-200 hover:scale-[1.02] hover:bg-gray-800/70 cursor-pointer group`}
+                >
+                  <div className="text-3xl mb-3">{p.icon}</div>
+                  <h3 className={`text-lg font-bold mb-1 bg-gradient-to-r ${p.color} bg-clip-text text-transparent`}>
+                    {p.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm mb-3">{p.description}</p>
+                  <div className="flex items-center gap-3 text-xs text-gray-500">
+                    <span>{p.slides} slides</span>
+                    <span>~{p.duration}</span>
+                  </div>
+                  <div className="mt-3 text-sm text-gray-500 group-hover:text-gray-300 transition-colors">
+                    Start →
+                  </div>
+                </button>
+              ))}
             </div>
-            <div className="mt-4 text-sm text-gray-500 group-hover:text-gray-300 transition-colors">
-              Start →
-            </div>
-          </button>
+          </div>
         ))}
       </div>
 
@@ -158,7 +171,7 @@ function App() {
   const goHome = () => setView(null)
 
   if (view) {
-    const pres = presentations.find((p) => p.id === view)
+    const pres = allPresentations.find((p) => p.id === view)
     if (pres) {
       const Component = pres.component
       return <Component onHome={goHome} />
