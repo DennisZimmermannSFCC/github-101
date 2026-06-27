@@ -34,7 +34,7 @@ const slides = [
             <div className="code-block mb-4">
               <p className="text-gray-400"># On github.com click "New repository"</p>
               <p className="text-gray-300">Name: <span className="text-emerald-400">commerce-agent-demo</span></p>
-              <p className="text-gray-300">Visibility: Public</p>
+              <p className="text-gray-300">Visibility: Private</p>
               <p className="text-gray-300">✓ Add a README</p>
             </div>
             <h3 className="text-cyan-400 font-semibold text-lg mb-3">Why we do it</h3>

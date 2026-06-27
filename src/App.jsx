@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import GitHubSetup from './presentations/GitHubSetup'
 import GitHub101 from './presentations/GitHub101'
 import GitHub102 from './presentations/GitHub102'
+import GitHub104 from './presentations/GitHub104'
 import HelloWorld from './presentations/HelloWorld'
 import WorkingLocally from './presentations/WorkingLocally'
 import Branches from './presentations/Branches'
@@ -55,6 +56,17 @@ const sections = [
         color: 'from-violet-400 to-fuchsia-400',
         border: 'border-violet-500/30 hover:border-violet-500/60',
         component: WorkingLocally,
+      },
+      {
+        id: 'github-104',
+        title: 'GitHub 104',
+        description: 'Share private repos with colleagues — invite, collaborate, control',
+        icon: '🤝',
+        duration: '8 min',
+        slides: 8,
+        color: 'from-amber-400 to-yellow-400',
+        border: 'border-amber-500/30 hover:border-amber-500/60',
+        component: GitHub104,
       },
       {
         id: 'hands-on-claude-code',

@@ -86,7 +86,7 @@ const slides = [
         <div className="card mb-6">
           <h3 className="text-sky-400 font-semibold text-lg mb-3">Say this to Claude Code</h3>
           <div className="code-block text-lg">
-            <p className="text-gray-200 italic">"Create a public GitHub repo called my-hello-world,</p>
+            <p className="text-gray-200 italic">"Create a private GitHub repo called my-hello-world,</p>
             <p className="text-gray-200 italic">commit everything, and push."</p>
           </div>
         </div>
