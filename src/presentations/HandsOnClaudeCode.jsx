@@ -134,13 +134,43 @@ const slides = [
   },
 
   {
+    id: 'step-5',
+    content: () => (
+      <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-4xl mx-auto">
+        <div className="flex items-center gap-3 mb-6">
+          <span className="bg-sky-500/20 text-sky-400 px-3 py-1 rounded-full text-sm font-mono">Step 5</span>
+          <h2 className="text-3xl font-bold">Undo the change</h2>
+        </div>
+        <div className="card mb-6">
+          <h3 className="text-sky-400 font-semibold text-lg mb-3">Say this to Claude Code</h3>
+          <div className="code-block text-lg relative">
+            <CopyButton text={"Undo the last commit and push."} />
+            <p className="text-gray-200 italic">"Undo the last commit and push."</p>
+          </div>
+        </div>
+        <div className="card mb-6">
+          <h3 className="text-gray-200 font-semibold mb-3">Claude Code will</h3>
+          <div className="space-y-2 text-sm text-gray-300">
+            <p className="flex gap-2"><span className="text-emerald-400">✓</span> Revert the tips commit</p>
+            <p className="flex gap-2"><span className="text-emerald-400">✓</span> Push the revert to GitHub</p>
+          </div>
+        </div>
+        <div className="card">
+          <p className="text-gray-400">Refresh GitHub — the tips section is gone. The commit history shows both the change and the revert. Nothing is ever truly lost.</p>
+          <p className="text-gray-500 text-sm mt-2">This is your safety net. You can always undo.</p>
+        </div>
+      </div>
+    ),
+  },
+
+  {
     id: 'done',
     content: () => (
       <div className="flex flex-col items-center justify-center h-full text-center px-8">
         <div className="text-6xl mb-6">🎉</div>
         <h2 className="text-4xl font-bold mb-6">That's it!</h2>
         <p className="text-xl text-gray-300 mb-8 max-w-md">
-          You just created a repo, pushed it, and made a change — all by talking to Claude Code.
+          You created a repo, pushed it, made a change, and undid it — all by talking to Claude Code.
         </p>
         <div className="grid md:grid-cols-2 gap-4 max-w-xl mb-8">
           <div className="card text-left">
@@ -149,6 +179,7 @@ const slides = [
               <p>"Create two files..."</p>
               <p>"Create a GitHub repo and push"</p>
               <p>"Add tips, commit and push"</p>
+              <p>"Undo the last commit and push"</p>
             </div>
           </div>
           <div className="card text-left">
@@ -157,6 +188,7 @@ const slides = [
               <p>Created README + demo script</p>
               <p>git init, commit, gh repo create, push</p>
               <p>Edited file, committed, pushed</p>
+              <p>Reverted commit, pushed</p>
             </div>
           </div>
         </div>
