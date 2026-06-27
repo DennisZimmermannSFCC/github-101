@@ -1,4 +1,5 @@
 import SlideViewer from '../components/SlideViewer'
+import CopyButton from '../components/CopyButton'
 
 const slides = [
   {
@@ -77,7 +78,8 @@ const slides = [
         </div>
         <div className="card">
           <h3 className="text-gray-200 font-semibold mb-2">Verify</h3>
-          <div className="code-block !p-3 text-sm">
+          <div className="code-block !p-3 relative text-sm">
+            <CopyButton text={"node --version\nclaude --version"} />
             <p className="text-rose-400">node --version</p>
             <p className="text-gray-500"># v20.x.x or higher ✓</p>
             <p className="text-rose-400 mt-2">claude --version</p>
@@ -101,7 +103,8 @@ const slides = [
             <div className="card mb-4">
               <h3 className="text-rose-400 font-semibold text-lg mb-3">What you do</h3>
               <p className="text-gray-300 mb-3">Create a folder and start Claude Code in it:</p>
-              <div className="code-block">
+              <div className="code-block relative">
+                <CopyButton text={"mkdir commerce-agent-demo\ncd commerce-agent-demo\nclaude"} />
                 <p className="text-rose-400">mkdir commerce-agent-demo</p>
                 <p className="text-rose-400">cd commerce-agent-demo</p>
                 <p className="text-rose-400">claude</p>
@@ -145,7 +148,8 @@ const slides = [
           <div>
             <div className="card mb-4">
               <h3 className="text-rose-400 font-semibold text-lg mb-3">What you say</h3>
-              <div className="code-block text-sm">
+              <div className="code-block text-sm relative">
+                <CopyButton text={"Build a commerce agent demo. Requirements:\n\n- Express server with a simple chat UI\n- The user types a question, the \"agent\" responds with product recommendations\n- Mock the AI responses (no real API needed) — match keywords to products\n- Include 8 sample products (mix of electronics and accessories)\n- Clean, modern UI with dark theme\n- Must start with: npm start\n- Create a README.md explaining what this is and how to run it\n\nKeep it simple — this is for demoing, not production."} />
                 <p className="text-gray-200 italic">Build a commerce agent demo. It should have:</p>
                 <p className="text-gray-200 italic mt-2">- A simple chat UI where you can talk to an AI agent</p>
                 <p className="text-gray-200 italic">- The agent recommends products from a sample catalog</p>
@@ -206,7 +210,8 @@ const slides = [
         </div>
         <div className="card mb-6">
           <h3 className="text-rose-400 font-semibold text-lg mb-3">What you say</h3>
-          <div className="code-block">
+          <div className="code-block relative">
+            <CopyButton text={"Create a GitHub repository for this project and push everything."} />
             <p className="text-gray-200 italic text-lg">"Create a GitHub repository for this project</p>
             <p className="text-gray-200 italic text-lg">and push everything."</p>
           </div>
@@ -287,7 +292,8 @@ const slides = [
           <div>
             <div className="card mb-4">
               <h3 className="text-rose-400 font-semibold text-lg mb-3">What you say</h3>
-              <div className="code-block text-sm">
+              <div className="code-block text-sm relative">
+                <CopyButton text={"Create a branch for ACME Retail.\n\nCustomize the demo for them:\n- Change product data to fashion items\n- Update UI colors to navy blue #1a237e and gold #ffd700\n- Add a style advisor persona to the agent responses\n\nCommit and push when done."} />
                 <p className="text-gray-200 italic">"Create a branch for ACME Retail.</p>
                 <p className="text-gray-200 italic mt-2">Customize the demo for them:</p>
                 <p className="text-gray-200 italic">- Change products to luxury fashion</p>
@@ -371,7 +377,8 @@ const slides = [
         <div className="grid md:grid-cols-2 gap-6">
           <div className="card">
             <h3 className="text-lg font-semibold mb-3 text-gray-200">They start Claude Code in the repo</h3>
-            <div className="code-block text-sm">
+            <div className="code-block text-sm relative">
+              <CopyButton text={"git clone https://github.com/you/commerce-agent-demo\ncd commerce-agent-demo\nnpm install\nclaude"} />
               <p className="text-rose-400">git clone https://github.com/you/commerce-agent-demo</p>
               <p className="text-rose-400">cd commerce-agent-demo</p>
               <p className="text-rose-400">npm install</p>

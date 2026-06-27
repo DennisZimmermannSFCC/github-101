@@ -1,4 +1,5 @@
 import SlideViewer from '../components/SlideViewer'
+import CopyButton from '../components/CopyButton'
 
 const slides = [
   {
@@ -105,7 +106,8 @@ const slides = [
           <div className="card">
             <h3 className="text-blue-400 font-semibold text-lg mb-4">Mac</h3>
             <p className="text-gray-400 text-sm mb-3">Open Terminal and run:</p>
-            <div className="code-block">
+            <div className="code-block relative">
+              <CopyButton text={"xcode-select --install"} />
               <p className="text-blue-400">xcode-select --install</p>
             </div>
             <p className="text-gray-500 text-sm mt-3">A popup appears — click "Install". Wait for it to finish (2-5 min).</p>
@@ -129,7 +131,8 @@ const slides = [
         </div>
         <div className="card mt-6">
           <h3 className="text-gray-200 font-semibold mb-2">Verify it worked</h3>
-          <div className="code-block !p-3">
+          <div className="code-block !p-3 relative">
+            <CopyButton text={"git --version"} />
             <p className="text-blue-400">git --version</p>
             <p className="text-gray-500 mt-1"># Should show: git version 2.x.x</p>
           </div>
@@ -148,7 +151,8 @@ const slides = [
         </div>
         <div className="card mb-6">
           <h3 className="text-blue-400 font-semibold text-lg mb-3">Run these two commands</h3>
-          <div className="code-block text-lg">
+          <div className="code-block text-lg relative">
+            <CopyButton text={"git config --global user.name \"Your Name\"\ngit config --global user.email \"you@company.com\""} />
             <p className="text-blue-400">git config --global user.name "Your Name"</p>
             <p className="text-blue-400 mt-2">git config --global user.email "you@company.com"</p>
           </div>
@@ -161,7 +165,8 @@ const slides = [
           </div>
           <div className="card">
             <h3 className="text-gray-200 font-semibold mb-2">Verify</h3>
-            <div className="code-block !p-3 text-sm">
+            <div className="code-block !p-3 text-sm relative">
+              <CopyButton text={"git config --global user.name\ngit config --global user.email"} />
               <p className="text-blue-400">git config --global user.name</p>
               <p className="text-gray-500"># Your Name</p>
               <p className="text-blue-400 mt-2">git config --global user.email</p>
@@ -184,7 +189,8 @@ const slides = [
         <div className="grid md:grid-cols-2 gap-6">
           <div className="card">
             <h3 className="text-blue-400 font-semibold text-lg mb-4">Mac</h3>
-            <div className="code-block">
+            <div className="code-block relative">
+              <CopyButton text={"brew install gh"} />
               <p className="text-blue-400">brew install gh</p>
             </div>
             <div className="mt-4 bg-gray-900 rounded-lg p-3 text-sm">
@@ -196,7 +202,8 @@ const slides = [
           </div>
           <div className="card">
             <h3 className="text-blue-400 font-semibold text-lg mb-4">Windows</h3>
-            <div className="code-block">
+            <div className="code-block relative">
+              <CopyButton text={"winget install --id GitHub.cli"} />
               <p className="text-blue-400">winget install --id GitHub.cli</p>
             </div>
             <div className="mt-4 bg-gray-900 rounded-lg p-3 text-sm">
@@ -223,7 +230,8 @@ const slides = [
         </div>
         <div className="card mb-6">
           <h3 className="text-blue-400 font-semibold text-lg mb-3">Run this</h3>
-          <div className="code-block text-lg">
+          <div className="code-block text-lg relative">
+            <CopyButton text={"gh auth login"} />
             <p className="text-blue-400">gh auth login</p>
           </div>
         </div>
@@ -247,7 +255,8 @@ const slides = [
         </div>
         <div className="card">
           <h3 className="text-gray-200 font-semibold mb-2">Verify</h3>
-          <div className="code-block !p-3">
+          <div className="code-block !p-3 relative">
+            <CopyButton text={"gh auth status"} />
             <p className="text-blue-400">gh auth status</p>
             <p className="text-gray-500 mt-1"># ✓ Logged in to github.com as YourUsername</p>
           </div>
@@ -262,7 +271,8 @@ const slides = [
       <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-8">Final check — run all of these</h2>
         <div className="card mb-6">
-          <div className="code-block">
+          <div className="code-block relative">
+            <CopyButton text={"git --version\ngit config --global user.name\ngh --version\ngh auth status"} />
             <p className="text-blue-400">git --version</p>
             <p className="text-gray-500"># git version 2.x.x ✓</p>
             <p className="text-blue-400 mt-3">git config --global user.name</p>
