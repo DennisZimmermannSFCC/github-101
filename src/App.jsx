@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import GitHubSetup from './presentations/GitHubSetup'
 import GitHub101 from './presentations/GitHub101'
+import GitHub102 from './presentations/GitHub102'
 import HelloWorld from './presentations/HelloWorld'
 import WorkingLocally from './presentations/WorkingLocally'
 import Branches from './presentations/Branches'
@@ -12,10 +13,10 @@ const presentations = [
     id: 'github-101',
     number: 1,
     title: 'GitHub 101',
-    description: 'Store, reuse, improve, and share your demo assets',
+    description: 'Why GitHub matters — concepts, structure, and good habits',
     icon: '📦',
-    duration: '20 min',
-    slides: 16,
+    duration: '10 min',
+    slides: 8,
     color: 'from-emerald-400 to-cyan-400',
     border: 'border-emerald-500/30 hover:border-emerald-500/60',
     component: GitHub101,
@@ -33,8 +34,20 @@ const presentations = [
     component: GitHubSetup,
   },
   {
-    id: 'working-locally',
+    id: 'github-102',
     number: 3,
+    title: 'GitHub 102',
+    description: 'Hands-on: build a demo repository on github.com',
+    icon: '🚀',
+    duration: '15 min',
+    slides: 10,
+    color: 'from-emerald-400 to-teal-400',
+    border: 'border-teal-500/30 hover:border-teal-500/60',
+    component: GitHub102,
+  },
+  {
+    id: 'working-locally',
+    number: 4,
     title: 'Working Locally',
     description: 'Clone, edit, commit, and push from your own machine',
     icon: '💻',
@@ -45,32 +58,8 @@ const presentations = [
     component: WorkingLocally,
   },
   {
-    id: 'hands-on-claude-code',
-    number: 4,
-    title: 'Hands-On: Claude Code',
-    description: 'Follow along — create your first repo with Claude Code',
-    icon: '🛠️',
-    duration: '5 min',
-    slides: 6,
-    color: 'from-sky-400 to-indigo-400',
-    border: 'border-sky-500/30 hover:border-sky-500/60',
-    component: HandsOnClaudeCode,
-  },
-  {
-    id: 'hello-world',
-    number: 5,
-    title: 'Hands-On: Hello World',
-    description: 'Your very first GitHub repository — no experience needed',
-    icon: '👋',
-    duration: '5 min',
-    slides: 9,
-    color: 'from-amber-400 to-orange-400',
-    border: 'border-amber-500/30 hover:border-amber-500/60',
-    component: HelloWorld,
-  },
-  {
     id: 'branches',
-    number: 6,
+    number: 5,
     title: 'Branches',
     description: 'Work on changes without breaking what already works',
     icon: '🌿',
@@ -82,7 +71,7 @@ const presentations = [
   },
   {
     id: 'claude-code',
-    number: 7,
+    number: 6,
     title: 'Claude Code + GitHub',
     description: 'Build complex demos with AI — from zero to shared with your team',
     icon: '🤖',
@@ -91,6 +80,18 @@ const presentations = [
     color: 'from-rose-400 to-pink-400',
     border: 'border-rose-500/30 hover:border-rose-500/60',
     component: ClaudeCode,
+  },
+  {
+    id: 'hands-on-claude-code',
+    number: 7,
+    title: 'Hands-On: Claude Code',
+    description: 'Follow along — create your first repo with Claude Code',
+    icon: '🛠️',
+    duration: '5 min',
+    slides: 6,
+    color: 'from-sky-400 to-indigo-400',
+    border: 'border-sky-500/30 hover:border-sky-500/60',
+    component: HandsOnClaudeCode,
   },
 ]
 
