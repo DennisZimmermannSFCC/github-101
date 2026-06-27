@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import GitHub101 from './presentations/GitHub101'
 import HelloWorld from './presentations/HelloWorld'
 import WorkingLocally from './presentations/WorkingLocally'
+import Branches from './presentations/Branches'
 
 const presentations = [
   {
@@ -25,6 +26,17 @@ const presentations = [
     color: 'from-violet-400 to-fuchsia-400',
     border: 'border-violet-500/30 hover:border-violet-500/60',
     component: WorkingLocally,
+  },
+  {
+    id: 'branches',
+    title: 'Branches',
+    description: 'Work on changes without breaking what already works',
+    icon: '🌿',
+    duration: '10 min',
+    slides: 12,
+    color: 'from-teal-400 to-emerald-400',
+    border: 'border-teal-500/30 hover:border-teal-500/60',
+    component: Branches,
   },
   {
     id: 'github-101',
@@ -52,7 +64,7 @@ function HomePage({ onSelect }) {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6 max-w-5xl w-full">
+      <div className="grid md:grid-cols-2 gap-6 max-w-4xl w-full">
         {presentations.map((p) => (
           <button
             key={p.id}
