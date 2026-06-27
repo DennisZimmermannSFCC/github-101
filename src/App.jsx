@@ -46,6 +46,17 @@ const sections = [
         component: GitHub102,
       },
       {
+        id: 'github-103',
+        title: 'GitHub 103',
+        description: 'Clone, edit, commit, and push from your own machine',
+        icon: '💻',
+        duration: '10 min',
+        slides: 11,
+        color: 'from-violet-400 to-fuchsia-400',
+        border: 'border-violet-500/30 hover:border-violet-500/60',
+        component: WorkingLocally,
+      },
+      {
         id: 'hands-on-claude-code',
         title: 'Hands-On: Claude Code',
         description: 'Follow along — create your first repo with Claude Code',
@@ -61,17 +72,6 @@ const sections = [
   {
     title: 'Understanding More',
     items: [
-      {
-        id: 'working-locally',
-        title: 'Working Locally',
-        description: 'Clone, edit, commit, and push from your own machine',
-        icon: '💻',
-        duration: '10 min',
-        slides: 11,
-        color: 'from-violet-400 to-fuchsia-400',
-        border: 'border-violet-500/30 hover:border-violet-500/60',
-        component: WorkingLocally,
-      },
       {
         id: 'branches',
         title: 'Branches',
