@@ -19,7 +19,7 @@ const sections = [
         description: 'Why GitHub matters — concepts, structure, and good habits',
         icon: '📦',
         duration: '10 min',
-        slides: 8,
+        slides: 9,
         color: 'from-emerald-400 to-cyan-400',
         border: 'border-emerald-500/30 hover:border-emerald-500/60',
         component: GitHub101,
