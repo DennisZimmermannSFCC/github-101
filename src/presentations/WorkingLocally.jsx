@@ -78,7 +78,7 @@ const slides = [
           </ul>
         </div>
         <div className="card">
-          <p className="text-gray-400">Not set up yet? Complete <span className="text-blue-400 font-semibold">GitHub Setup</span> (presentation 1) first.</p>
+          <p className="text-gray-400">Not set up yet? Complete <span className="text-blue-400 font-semibold">GitHub Setup</span> first. Need a repo? Complete <span className="text-emerald-400 font-semibold">GitHub 102</span> first.</p>
         </div>
       </div>
     ),
@@ -532,8 +532,7 @@ const slides = [
         <div className="card max-w-lg">
           <h3 className="text-lg font-semibold text-gray-200 mb-2">Next up</h3>
           <p className="text-gray-400">
-            Check out <span className="text-emerald-400 font-semibold">GitHub 101</span> to learn branching,
-            pull requests, and team collaboration.
+            Continue with <span className="text-amber-400 font-semibold">GitHub 104</span> to learn how to share your repo with colleagues.
           </p>
         </div>
       </div>

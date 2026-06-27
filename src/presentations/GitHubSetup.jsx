@@ -32,6 +32,7 @@ const slides = [
             { num: '2', title: 'Git', desc: 'The version control tool that runs on your machine', time: '3 min' },
             { num: '3', title: 'Git identity', desc: 'Tell Git your name and email', time: '1 min' },
             { num: '4', title: 'GitHub CLI', desc: 'Create repos and PRs from your terminal', time: '5 min' },
+            { num: '5', title: 'Node.js & Claude Code', desc: 'Optional — for AI-assisted workflow', time: '3 min' },
           ].map((item) => (
             <div key={item.num} className="flex items-center gap-4">
               <span className="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-mono text-sm shrink-0">{item.num}</span>
@@ -259,6 +260,44 @@ const slides = [
             <CopyButton text={"gh auth status"} />
             <p className="text-blue-400">gh auth status</p>
             <p className="text-gray-500 mt-1"># ✓ Logged in to github.com as YourUsername</p>
+          </div>
+        </div>
+      </div>
+    ),
+  },
+
+  {
+    id: 'install-node-claude',
+    content: () => (
+      <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-5xl mx-auto">
+        <div className="flex items-center gap-3 mb-6">
+          <span className="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm font-mono">Step 6</span>
+          <h2 className="text-3xl font-bold">Install Node.js & Claude Code</h2>
+        </div>
+        <p className="text-gray-400 mb-6">Needed for the <span className="text-sky-400 font-semibold">Hands-On: Claude Code</span> tutorial. Skip if you only want to use GitHub in the browser.</p>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="card">
+            <h3 className="text-blue-400 font-semibold text-lg mb-3">Node.js</h3>
+            <p className="text-gray-400 text-sm mb-3">Download from <span className="text-blue-400 font-mono">nodejs.org</span> — pick the LTS version.</p>
+            <div className="code-block !p-3 relative">
+              <CopyButton text={"node --version"} />
+              <p className="text-blue-400">node --version</p>
+              <p className="text-gray-500"># v20.x.x or higher ✓</p>
+            </div>
+          </div>
+          <div className="card">
+            <h3 className="text-blue-400 font-semibold text-lg mb-3">Claude Code</h3>
+            <p className="text-gray-400 text-sm mb-3">Install via npm (comes with Node.js):</p>
+            <div className="code-block !p-3 relative">
+              <CopyButton text={"npm install -g @anthropic-ai/claude-code"} />
+              <p className="text-blue-400">npm install -g @anthropic-ai/claude-code</p>
+            </div>
+            <p className="text-gray-500 text-xs mt-3">Requires an Anthropic API key or Claude Max subscription.</p>
+            <div className="code-block !p-3 relative mt-3">
+              <CopyButton text={"claude --version"} />
+              <p className="text-blue-400">claude --version</p>
+              <p className="text-gray-500"># claude-code x.x.x ✓</p>
+            </div>
           </div>
         </div>
       </div>

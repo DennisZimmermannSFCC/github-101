@@ -163,18 +163,19 @@ const slides = [
     content: () => (
       <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-5xl mx-auto">
         <h2 className="text-4xl font-bold mb-6">The daily workflow</h2>
+        <p className="text-gray-400 mb-6">Every change you make follows this cycle:</p>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="flex flex-col items-center gap-2">
             {[
-              { step: 'Edit files', color: 'text-violet-400' },
-              { step: 'git status', color: 'text-cyan-400' },
-              { step: 'git add', color: 'text-teal-400' },
-              { step: 'git commit', color: 'text-emerald-400' },
-              { step: 'git push', color: 'text-amber-400' },
+              { step: 'Edit', color: 'text-violet-400' },
+              { step: 'Review', color: 'text-cyan-400' },
+              { step: 'Stage', color: 'text-teal-400' },
+              { step: 'Commit', color: 'text-emerald-400' },
+              { step: 'Push', color: 'text-amber-400' },
             ].map((item, i) => (
               <div key={item.step} className="w-full max-w-xs">
                 <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg px-5 py-2.5 text-center">
-                  <span className={`font-mono font-semibold ${item.color}`}>{item.step}</span>
+                  <span className={`font-semibold ${item.color}`}>{item.step}</span>
                 </div>
                 {i < 4 && <div className="text-center text-gray-700">↓</div>}
               </div>
@@ -183,23 +184,23 @@ const slides = [
           </div>
           <div className="space-y-4">
             <div className="card !py-3">
-              <p className="text-violet-400 font-semibold text-sm">Edit files</p>
+              <p className="text-violet-400 font-semibold text-sm">Edit</p>
               <p className="text-gray-400 text-sm">Make changes in your editor — code, docs, anything</p>
             </div>
             <div className="card !py-3">
-              <p className="text-cyan-400 font-semibold text-sm">git status</p>
+              <p className="text-cyan-400 font-semibold text-sm">Review</p>
               <p className="text-gray-400 text-sm">Check what changed — no surprises before saving</p>
             </div>
             <div className="card !py-3">
-              <p className="text-teal-400 font-semibold text-sm">git add</p>
-              <p className="text-gray-400 text-sm">Stage the files you want to include in this save</p>
+              <p className="text-teal-400 font-semibold text-sm">Stage</p>
+              <p className="text-gray-400 text-sm">Pick which changes to include in this save</p>
             </div>
             <div className="card !py-3">
-              <p className="text-emerald-400 font-semibold text-sm">git commit</p>
+              <p className="text-emerald-400 font-semibold text-sm">Commit</p>
               <p className="text-gray-400 text-sm">Save a snapshot with a message — a checkpoint you can return to</p>
             </div>
             <div className="card !py-3">
-              <p className="text-amber-400 font-semibold text-sm">git push</p>
+              <p className="text-amber-400 font-semibold text-sm">Push</p>
               <p className="text-gray-400 text-sm">Upload to GitHub — now it's backed up and shared with the team</p>
             </div>
           </div>
@@ -282,9 +283,9 @@ const slides = [
           </div>
         </div>
         <div className="card max-w-2xl mx-auto">
-          <h3 className="text-xl font-semibold mb-3 text-gray-200">Next: try it yourself</h3>
+          <h3 className="text-xl font-semibold mb-3 text-gray-200">Next steps</h3>
           <p className="text-gray-300 text-lg">
-            Head to <span className="highlight">GitHub 102</span> for the hands-on walkthrough — build a demo repo on github.com step by step.
+            Complete <span className="text-blue-400 font-semibold">GitHub Setup</span> to install the tools, then follow along with <span className="highlight">GitHub 102</span> to build your first repo.
           </p>
         </div>
       </div>
