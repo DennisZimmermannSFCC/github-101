@@ -3,6 +3,7 @@ import GitHub101 from './presentations/GitHub101'
 import HelloWorld from './presentations/HelloWorld'
 import WorkingLocally from './presentations/WorkingLocally'
 import Branches from './presentations/Branches'
+import ClaudeCode from './presentations/ClaudeCode'
 
 const presentations = [
   {
@@ -53,6 +54,18 @@ const presentations = [
     border: 'border-emerald-500/30 hover:border-emerald-500/60',
     component: GitHub101,
   },
+  {
+    id: 'claude-code',
+    number: 5,
+    title: 'Claude Code + GitHub',
+    description: 'Build complex demos with AI and manage them with Git',
+    icon: '🤖',
+    duration: '10 min',
+    slides: 11,
+    color: 'from-rose-400 to-pink-400',
+    border: 'border-rose-500/30 hover:border-rose-500/60',
+    component: ClaudeCode,
+  },
 ]
 
 function HomePage({ onSelect }) {
@@ -75,7 +88,7 @@ function HomePage({ onSelect }) {
             onClick={() => onSelect(p.id)}
             className={`card text-left border ${p.border} transition-all duration-200 hover:scale-[1.02] hover:bg-gray-800/70 cursor-pointer group relative`}
           >
-            <span className="absolute top-4 right-4 text-xs font-mono text-gray-600">{p.number}/4</span>
+            <span className="absolute top-4 right-4 text-xs font-mono text-gray-600">{p.number}/{presentations.length}</span>
             <div className="text-4xl mb-4">{p.icon}</div>
             <h2 className={`text-2xl font-bold mb-2 bg-gradient-to-r ${p.color} bg-clip-text text-transparent`}>
               {p.title}
