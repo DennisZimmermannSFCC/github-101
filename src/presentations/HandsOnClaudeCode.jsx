@@ -16,12 +16,46 @@ const slides = [
         <div className="card max-w-lg">
           <h3 className="text-gray-200 font-semibold mb-2">You need</h3>
           <ul className="text-gray-400 text-sm space-y-1 text-left">
-            <li>✓ GitHub account</li>
-            <li>✓ Git, Node.js, GitHub CLI installed</li>
-            <li>✓ Claude Code installed</li>
-            <li>✓ <code className="bg-gray-700 px-1 rounded">gh auth login</code> done</li>
+            <li>✓ GitHub account, Git, GitHub CLI (<span className="text-blue-400">GitHub Setup</span>)</li>
+            <li>✓ Node.js & Claude Code (next slide)</li>
           </ul>
-          <p className="text-gray-500 text-xs mt-3">Not set up yet? Complete <span className="text-blue-400">GitHub Setup</span> first.</p>
+        </div>
+      </div>
+    ),
+  },
+
+  {
+    id: 'setup-node-claude',
+    content: () => (
+      <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-5xl mx-auto">
+        <div className="flex items-center gap-3 mb-6">
+          <span className="bg-sky-500/20 text-sky-400 px-3 py-1 rounded-full text-sm font-mono">Setup</span>
+          <h2 className="text-3xl font-bold">Install Node.js & Claude Code</h2>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="card">
+            <h3 className="text-sky-400 font-semibold text-lg mb-3">1. Node.js</h3>
+            <p className="text-gray-400 text-sm mb-3">Download from <span className="text-sky-400 font-mono">nodejs.org</span> — pick the LTS version. Install with defaults.</p>
+            <div className="code-block !p-3 relative">
+              <CopyButton text={"node --version"} />
+              <p className="text-sky-400">node --version</p>
+              <p className="text-gray-500"># v20.x.x or higher ✓</p>
+            </div>
+          </div>
+          <div className="card">
+            <h3 className="text-sky-400 font-semibold text-lg mb-3">2. Claude Code</h3>
+            <p className="text-gray-400 text-sm mb-3">Open your terminal and run:</p>
+            <div className="code-block !p-3 relative">
+              <CopyButton text={"npm install -g @anthropic-ai/claude-code"} />
+              <p className="text-sky-400">npm install -g @anthropic-ai/claude-code</p>
+            </div>
+            <p className="text-gray-500 text-xs mt-3">Requires an Anthropic API key or Claude Max subscription.</p>
+            <div className="code-block !p-3 relative mt-3">
+              <CopyButton text={"claude --version"} />
+              <p className="text-sky-400">claude --version</p>
+              <p className="text-gray-500"># claude-code x.x.x ✓</p>
+            </div>
+          </div>
         </div>
       </div>
     ),
