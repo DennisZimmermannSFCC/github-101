@@ -20,7 +20,7 @@ const slides = [
             <li>✓ Claude Code installed</li>
             <li>✓ <code className="bg-gray-700 px-1 rounded">gh auth login</code> done</li>
           </ul>
-          <p className="text-gray-500 text-xs mt-3">See presentation 5 for setup.</p>
+          <p className="text-gray-500 text-xs mt-3">Not set up yet? Complete <span className="text-blue-400">GitHub Setup</span> first.</p>
         </div>
       </div>
     ),
