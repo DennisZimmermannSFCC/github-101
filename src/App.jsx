@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import GitHub101 from './presentations/GitHub101'
 import HelloWorld from './presentations/HelloWorld'
+import WorkingLocally from './presentations/WorkingLocally'
 
 const presentations = [
   {
@@ -13,6 +14,17 @@ const presentations = [
     color: 'from-amber-400 to-orange-400',
     border: 'border-amber-500/30 hover:border-amber-500/60',
     component: HelloWorld,
+  },
+  {
+    id: 'working-locally',
+    title: 'Working Locally',
+    description: 'Clone, edit, commit, and push from your own machine',
+    icon: '💻',
+    duration: '10 min',
+    slides: 13,
+    color: 'from-violet-400 to-fuchsia-400',
+    border: 'border-violet-500/30 hover:border-violet-500/60',
+    component: WorkingLocally,
   },
   {
     id: 'github-101',
@@ -40,7 +52,7 @@ function HomePage({ onSelect }) {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 max-w-3xl w-full">
+      <div className="grid md:grid-cols-3 gap-6 max-w-5xl w-full">
         {presentations.map((p) => (
           <button
             key={p.id}
