@@ -214,26 +214,35 @@ const slides = [
     content: () => (
       <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-3xl mx-auto">
         <h2 className="text-4xl font-bold mb-8">The daily workflow</h2>
-        <div className="flex flex-col items-center gap-2">
-          {[
-            { step: 'Edit files', color: 'text-violet-400' },
-            { step: 'git status', color: 'text-cyan-400' },
-            { step: 'git add', color: 'text-teal-400' },
-            { step: 'git commit', color: 'text-emerald-400' },
-            { step: 'git push', color: 'text-amber-400' },
-          ].map((item, i) => (
-            <div key={item.step} className="w-full max-w-sm">
-              <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg px-6 py-3 text-center">
-                <span className={`font-mono font-semibold ${item.color}`}>{item.step}</span>
+        <div className="flex items-start justify-center gap-4">
+          <div className="flex flex-col items-center gap-2">
+            {[
+              { step: 'Edit files', color: 'text-violet-400' },
+              { step: 'git status', color: 'text-cyan-400' },
+              { step: 'git add', color: 'text-teal-400' },
+              { step: 'git commit', color: 'text-emerald-400' },
+              { step: 'git push', color: 'text-amber-400' },
+            ].map((item, i) => (
+              <div key={item.step} className="w-full max-w-sm">
+                <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg px-6 py-3 text-center">
+                  <span className={`font-mono font-semibold ${item.color}`}>{item.step}</span>
+                </div>
+                {i < 4 && <div className="text-center text-gray-700 text-lg">↓</div>}
               </div>
-              {i < 4 && <div className="text-center text-gray-700 text-lg">↓</div>}
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="hidden md:flex flex-col items-center justify-between h-full pt-2 pb-2">
+            <span className="text-gray-700 text-sm">╭</span>
+            <div className="w-px h-full border-l border-dashed border-gray-700"></div>
+            <span className="text-gray-700 text-sm">╰</span>
+          </div>
+          <div className="hidden md:flex items-center text-gray-500 text-sm mt-auto mb-auto">
+            <span>↑ repeat</span>
+          </div>
         </div>
-        <div className="card mt-8 max-w-sm mx-auto">
-          <p className="text-gray-400 text-center text-sm">
-            This loop repeats for every change you make.
-          </p>
+        <div className="code-block mt-8 max-w-sm mx-auto text-center text-sm">
+          <p className="text-gray-500">after push → back to editing</p>
+          <p className="text-amber-400 mt-1">↻ repeat for every change</p>
         </div>
       </div>
     ),
