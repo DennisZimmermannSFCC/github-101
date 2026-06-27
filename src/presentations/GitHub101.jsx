@@ -212,34 +212,27 @@ const slides = [
   {
     id: 'typical-flow',
     content: () => (
-      <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold mb-6">A typical GitHub workflow</h2>
-        <p className="text-gray-400 text-lg mb-6">This is what day-to-day work looks like with GitHub:</p>
-        <div className="flex flex-col items-center gap-2 mb-6">
+      <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-3xl mx-auto">
+        <h2 className="text-4xl font-bold mb-8">The daily workflow</h2>
+        <div className="flex flex-col items-center gap-2">
           {[
-            { step: 'Create a repo', desc: 'One-time: set up your project on GitHub', icon: '📦', color: 'text-emerald-400' },
-            { step: 'Clone to your machine', desc: 'Download it so you can work locally', icon: '⬇️', color: 'text-cyan-400' },
-            { step: 'Create a branch', desc: 'Work on a change without affecting main', icon: '🌿', color: 'text-teal-400' },
-            { step: 'Edit, commit, push', desc: 'Make changes, save snapshots, upload', icon: '✏️', color: 'text-violet-400' },
-            { step: 'Open a Pull Request', desc: 'Propose your changes for review', icon: '🔀', color: 'text-amber-400' },
-            { step: 'Review and merge', desc: 'Colleague approves → changes go to main', icon: '✅', color: 'text-emerald-400' },
-            { step: 'Others pull the update', desc: 'Everyone gets the improvement automatically', icon: '🔄', color: 'text-cyan-400' },
+            { step: 'Edit files', color: 'text-violet-400' },
+            { step: 'git status', color: 'text-cyan-400' },
+            { step: 'git add', color: 'text-teal-400' },
+            { step: 'git commit', color: 'text-emerald-400' },
+            { step: 'git push', color: 'text-amber-400' },
           ].map((item, i) => (
-            <div key={item.step} className="w-full max-w-2xl">
-              <div className="flex items-center gap-4 bg-gray-800/50 border border-gray-700/50 rounded-lg px-4 py-3">
-                <span className="text-xl">{item.icon}</span>
-                <div className="flex-1">
-                  <span className={`font-semibold ${item.color}`}>{item.step}</span>
-                  <span className="text-gray-500 text-sm ml-2 hidden md:inline">— {item.desc}</span>
-                </div>
+            <div key={item.step} className="w-full max-w-sm">
+              <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg px-6 py-3 text-center">
+                <span className={`font-mono font-semibold ${item.color}`}>{item.step}</span>
               </div>
-              {i < 6 && <div className="text-center text-gray-700 text-lg">↓</div>}
+              {i < 4 && <div className="text-center text-gray-700 text-lg">↓</div>}
             </div>
           ))}
         </div>
-        <div className="card max-w-2xl mx-auto">
+        <div className="card mt-8 max-w-sm mx-auto">
           <p className="text-gray-400 text-center text-sm">
-            Steps 3–7 repeat for every new change. The repo and clone are one-time.
+            This loop repeats for every change you make.
           </p>
         </div>
       </div>
