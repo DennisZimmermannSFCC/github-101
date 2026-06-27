@@ -11,6 +11,33 @@ import HandsOnClaudeCode from './presentations/HandsOnClaudeCode'
 
 const sections = [
   {
+    title: 'I do not RTFM',
+    items: [
+      {
+        id: 'github-setup',
+        title: 'GitHub Setup',
+        description: 'Install everything you need — one-time setup',
+        icon: '⚙️',
+        duration: '15 min',
+        slides: 9,
+        color: 'from-blue-400 to-sky-400',
+        border: 'border-blue-500/30 hover:border-blue-500/60',
+        component: GitHubSetup,
+      },
+      {
+        id: 'hands-on-claude-code',
+        title: 'Hands-On: Claude Code',
+        description: 'Follow along — create your first repo with Claude Code',
+        icon: '🛠️',
+        duration: '5 min',
+        slides: 6,
+        color: 'from-sky-400 to-indigo-400',
+        border: 'border-sky-500/30 hover:border-sky-500/60',
+        component: HandsOnClaudeCode,
+      },
+    ],
+  },
+  {
     title: 'Getting Started',
     items: [
       {
