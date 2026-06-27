@@ -365,23 +365,18 @@ const slides = [
       <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-5xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
           <span className="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-sm font-mono">Hands-on 5</span>
-          <h2 className="text-3xl font-bold">Commit your changes</h2>
+          <h2 className="text-3xl font-bold">Understanding commits</h2>
         </div>
-        <div className="mb-6">
-          <h3 className="highlight text-lg mb-3">What we do</h3>
-          <p className="text-gray-300 text-lg mb-4">Save a snapshot of our work with a meaningful message.</p>
-          <div className="code-block">
-            <p className="text-gray-400"># Each commit is a checkpoint you can return to</p>
-            <p className="text-emerald-400 mt-2">git add .</p>
-            <p className="text-emerald-400">git commit -m "Add sample data and screenshots folder"</p>
-          </div>
+        <div className="card mb-6">
+          <h3 className="highlight text-lg mb-3">What just happened</h3>
+          <p className="text-gray-300 text-lg">Every time you clicked "Commit changes" on GitHub, you created a <span className="highlight">commit</span> — a saved snapshot with a message describing what you did.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="card">
-            <h3 className="text-cyan-400 font-semibold mb-3">Why we do it</h3>
+            <h3 className="text-cyan-400 font-semibold mb-3">Why commits matter</h3>
             <p className="text-gray-400">
-              Commits create a timeline. If a demo breaks after changes, you can always go back to a working version.
-              Good commit messages tell the story of your project.
+              Commits create a timeline. If a demo breaks after a change, you can always go back to a previous version.
+              Click "Commits" on your repo page to see the full history.
             </p>
           </div>
           <div className="card">
@@ -409,34 +404,29 @@ const slides = [
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <h3 className="highlight text-lg mb-3">What we do</h3>
-            <p className="text-gray-400 mb-3">Create a branch for an ACME Corp customization:</p>
-            <div className="code-block">
-              <p className="text-emerald-400">git checkout -b customer/acme-corp</p>
-              <p className="text-gray-400 mt-2"># Now modify the demo for ACME:</p>
-              <p className="text-gray-400"># - Add their product catalog</p>
-              <p className="text-gray-400"># - Use their branding colors</p>
-              <p className="text-gray-400"># - Customize talk track</p>
-            </div>
+            <p className="text-gray-400 mb-3">Create a parallel version for an ACME Corp customization — directly on GitHub:</p>
             <h3 className="text-cyan-400 font-semibold text-lg mt-4 mb-3">Why we do it</h3>
             <p className="text-gray-400">
               Branches let you customize for each customer without changing the base demo. Your main branch stays clean
-              and reusable.
+              and reusable. Each customer gets their own version.
             </p>
-          </div>
-          <div className="card">
-            <h3 className="text-lg font-semibold mb-3 text-gray-200">Follow along</h3>
-            <ol className="space-y-3 text-gray-300 text-sm">
-              <li><span className="highlight">1.</span> On GitHub, click the branch dropdown (says "main")</li>
-              <li><span className="highlight">2.</span> Type <code className="bg-gray-700 px-1 rounded">customer/acme-corp</code></li>
-              <li><span className="highlight">3.</span> Click "Create branch: customer/acme-corp"</li>
-              <li><span className="highlight">4.</span> You're now on the new branch</li>
-              <li><span className="highlight">5.</span> Edit files — changes only affect this branch</li>
-            </ol>
             <div className="mt-4 bg-gray-900 rounded-lg p-3 text-sm">
               <p className="text-gray-400">Naming convention:</p>
               <p className="text-gray-300 mt-1"><code>customer/company-name</code></p>
               <p className="text-gray-300"><code>feature/new-capability</code></p>
             </div>
+          </div>
+          <div className="card">
+            <h3 className="text-lg font-semibold mb-3 text-gray-200">Follow along on github.com</h3>
+            <ol className="space-y-3 text-gray-300 text-sm">
+              <li><span className="highlight">1.</span> Click the branch dropdown (says "main")</li>
+              <li><span className="highlight">2.</span> Type <code className="bg-gray-700 px-1 rounded">customer/acme-corp</code></li>
+              <li><span className="highlight">3.</span> Click "Create branch: customer/acme-corp"</li>
+              <li><span className="highlight">4.</span> You're now on the new branch</li>
+              <li><span className="highlight">5.</span> Edit a file (e.g. change the README title to "ACME Demo")</li>
+              <li><span className="highlight">6.</span> Commit the change</li>
+              <li><span className="highlight">7.</span> Switch back to main — your original is untouched</li>
+            </ol>
           </div>
         </div>
       </div>
