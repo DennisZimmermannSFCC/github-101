@@ -68,29 +68,61 @@ const slides = [
           <div>
             <div className="card mb-4">
               <p className="text-gray-300 text-lg leading-relaxed">
-                An AI assistant that lives in your terminal. It can read, write, and edit files,
-                run commands, and use Git — all from natural language instructions.
+                An AI assistant that lives in your terminal. You describe what you want in plain English —
+                it writes code, runs commands, <span className="text-rose-400 font-semibold">and handles all the Git operations for you</span>.
               </p>
             </div>
             <div className="code-block">
               <p className="text-gray-500"># Install it</p>
               <p className="text-rose-400">npm install -g @anthropic-ai/claude-code</p>
-              <p className="text-gray-500 mt-3"># Start it in any project</p>
+              <p className="text-gray-500 mt-3"># Start it in any project folder</p>
               <p className="text-rose-400">cd commerce-agent-demo</p>
               <p className="text-rose-400">claude</p>
             </div>
           </div>
           <div className="card">
-            <h3 className="text-lg font-semibold mb-3 text-gray-200">What it can do</h3>
+            <h3 className="text-lg font-semibold mb-3 text-gray-200">You talk, it does everything</h3>
             <ul className="space-y-3 text-gray-300">
-              <li className="flex gap-2"><span className="text-rose-400">→</span> Create entire applications from a description</li>
-              <li className="flex gap-2"><span className="text-rose-400">→</span> Edit existing files intelligently</li>
-              <li className="flex gap-2"><span className="text-rose-400">→</span> Run terminal commands</li>
-              <li className="flex gap-2"><span className="text-rose-400">→</span> Read and understand your codebase</li>
-              <li className="flex gap-2"><span className="text-rose-400">→</span> Commit and push to GitHub</li>
-              <li className="flex gap-2"><span className="text-rose-400">→</span> Fix bugs and add features</li>
+              <li className="flex gap-2"><span className="text-rose-400">→</span> Creates entire applications</li>
+              <li className="flex gap-2"><span className="text-rose-400">→</span> Edits existing files</li>
+              <li className="flex gap-2"><span className="text-rose-400">→</span> Runs terminal commands</li>
+              <li className="flex gap-2"><span className="text-rose-400">→</span> Commits with clear messages</li>
+              <li className="flex gap-2"><span className="text-rose-400">→</span> Creates branches</li>
+              <li className="flex gap-2"><span className="text-rose-400">→</span> Pushes to GitHub</li>
+              <li className="flex gap-2"><span className="text-rose-400">→</span> Creates pull requests</li>
             </ul>
           </div>
+        </div>
+      </div>
+    ),
+  },
+
+  {
+    id: 'claude-does-git',
+    content: () => (
+      <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-4xl mx-auto">
+        <h2 className="text-4xl font-bold mb-6">Claude Code handles Git for you</h2>
+        <p className="text-gray-400 text-lg mb-6">
+          You don't need to memorize Git commands. Just tell Claude Code what you want in plain English.
+        </p>
+        <div className="space-y-4">
+          {[
+            { you: '"Commit what we have so far"', claude: 'git add . && git commit -m "Add product search endpoint and chat UI"' },
+            { you: '"Push this to GitHub"', claude: 'git push origin main' },
+            { you: '"Create a branch for the ACME customer"', claude: 'git checkout -b customer/acme-retail' },
+            { you: '"Commit this, then switch back to main"', claude: 'git add . && git commit -m "..." && git checkout main' },
+            { you: '"Create a pull request for this branch"', claude: 'gh pr create --title "..." --body "..."' },
+          ].map((item, i) => (
+            <div key={i} className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-4">
+              <p className="text-gray-200 text-sm"><span className="text-rose-400 font-semibold">You:</span> {item.you}</p>
+              <p className="text-gray-500 text-xs font-mono mt-1">Claude Code runs: <span className="text-emerald-400">{item.claude}</span></p>
+            </div>
+          ))}
+        </div>
+        <div className="card mt-6">
+          <p className="text-gray-400 text-center">
+            Claude Code picks the right commands and writes meaningful commit messages based on what actually changed.
+          </p>
         </div>
       </div>
     ),
@@ -175,17 +207,13 @@ const slides = [
               </div>
               <div className="flex gap-2">
                 <span className="text-emerald-400">✓</span>
-                <span className="text-gray-300">Runs npm install</span>
-              </div>
-              <div className="flex gap-2">
-                <span className="text-emerald-400">✓</span>
-                <span className="text-gray-300">Tests that it starts correctly</span>
+                <span className="text-gray-300">Runs npm install and tests it</span>
               </div>
             </div>
             <div className="mt-4 bg-gray-900 rounded-lg p-3">
-              <p className="text-gray-400 text-sm">Then you commit and push:</p>
-              <p className="text-rose-400 font-mono text-sm mt-1">git add . && git commit -m "Initial demo app"</p>
-              <p className="text-rose-400 font-mono text-sm">git push</p>
+              <p className="text-gray-400 text-sm">Then just say:</p>
+              <p className="text-gray-200 text-sm mt-1 italic">"Commit this and push it to GitHub"</p>
+              <p className="text-gray-500 text-xs mt-2">Claude Code stages, commits with a good message, and pushes.</p>
             </div>
           </div>
         </div>
@@ -204,21 +232,18 @@ const slides = [
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <div className="card mb-4">
-              <h3 className="text-rose-400 font-semibold text-lg mb-3">The Git + Claude Code combo</h3>
+              <h3 className="text-rose-400 font-semibold text-lg mb-3">Just tell Claude Code</h3>
               <div className="code-block text-sm">
-                <p className="text-gray-500"># 1. Create a customer branch</p>
-                <p className="text-rose-400">git checkout -b customer/acme-retail</p>
-                <p className="text-gray-500 mt-3"># 2. Tell Claude Code what to change</p>
-                <p className="text-gray-300 mt-1">Customize this demo for ACME Retail:</p>
-                <p className="text-gray-300">- Change product data to fashion items</p>
-                <p className="text-gray-300">- Update UI colors to match their brand</p>
-                <p className="text-gray-300">  (navy blue #1a237e, gold #ffd700)</p>
-                <p className="text-gray-300">- Add a "style advisor" persona to the</p>
-                <p className="text-gray-300">  agent responses</p>
-                <p className="text-gray-500 mt-3"># 3. Commit the customization</p>
-                <p className="text-rose-400">git add . && git commit -m "Customize for ACME Retail"</p>
-                <p className="text-rose-400">git push -u origin customer/acme-retail</p>
+                <p className="text-gray-200 italic">"Create a branch for ACME Retail and</p>
+                <p className="text-gray-200 italic">customize this demo for them:</p>
+                <p className="text-gray-200 italic mt-2">- Change product data to fashion items</p>
+                <p className="text-gray-200 italic">- Update UI colors to navy blue #1a237e</p>
+                <p className="text-gray-200 italic">  and gold #ffd700</p>
+                <p className="text-gray-200 italic">- Add a style advisor persona to the</p>
+                <p className="text-gray-200 italic">  agent responses</p>
+                <p className="text-gray-200 italic mt-2">Then commit and push the branch."</p>
               </div>
+              <p className="text-gray-500 text-xs mt-3">Claude Code creates the branch, makes all changes, commits, and pushes — one conversation.</p>
             </div>
           </div>
           <div>
@@ -234,13 +259,18 @@ const slides = [
             <div className="card">
               <h3 className="text-lg font-semibold mb-3 text-gray-200">Revert if needed</h3>
               <p className="text-gray-400 text-sm mb-2">
-                Don't like what Claude Code did? Git has your back:
+                Don't like the result? Just say:
               </p>
-              <div className="code-block !p-3 text-sm">
-                <p className="text-gray-500"># Undo uncommitted changes</p>
-                <p className="text-rose-400">git checkout .</p>
-                <p className="text-gray-500 mt-2"># Or go back to main</p>
-                <p className="text-rose-400">git checkout main</p>
+              <div className="space-y-2">
+                <div className="bg-gray-900 rounded-lg p-3 text-sm">
+                  <p className="text-gray-200 italic">"Undo that last change"</p>
+                </div>
+                <div className="bg-gray-900 rounded-lg p-3 text-sm">
+                  <p className="text-gray-200 italic">"Switch back to main"</p>
+                </div>
+                <div className="bg-gray-900 rounded-lg p-3 text-sm">
+                  <p className="text-gray-200 italic">"Delete this branch, it didn't work out"</p>
+                </div>
               </div>
             </div>
           </div>
@@ -259,23 +289,23 @@ const slides = [
         </div>
         <div className="card mb-6">
           <h3 className="text-rose-400 font-semibold text-lg mb-3">The feedback loop</h3>
-          <p className="text-gray-300 mb-4">After a demo, you learn what worked and what didn't. Claude Code makes improvements instant.</p>
+          <p className="text-gray-300 mb-4">After a demo, tell Claude Code what to improve. It makes the changes and commits them.</p>
           <div className="space-y-4">
             {[
-              { prompt: '"The checkout flow was confusing — simplify it to 2 steps"', commit: 'Simplify checkout to 2-step flow' },
-              { prompt: '"Add a loading animation when the agent is thinking"', commit: 'Add thinking indicator to agent responses' },
-              { prompt: '"The customer asked about returns — add a returns FAQ to the agent"', commit: 'Add returns FAQ to agent knowledge base' },
+              { prompt: '"The checkout flow was confusing — simplify it to 2 steps. Commit when done."', commit: 'Simplify checkout to 2-step flow' },
+              { prompt: '"Add a loading animation when the agent is thinking. Commit and push."', commit: 'Add thinking indicator to agent responses' },
+              { prompt: '"The customer asked about returns — add a returns FAQ to the agent knowledge base. Commit."', commit: 'Add returns FAQ to agent knowledge base' },
             ].map((item, i) => (
               <div key={i} className="bg-gray-900 rounded-lg p-3">
-                <p className="text-gray-300 text-sm italic">{item.prompt}</p>
-                <p className="text-gray-500 text-xs mt-1">→ commit: <span className="text-emerald-400">{item.commit}</span></p>
+                <p className="text-gray-200 text-sm italic">{item.prompt}</p>
+                <p className="text-gray-500 text-xs mt-1">Claude Code commits: <span className="text-emerald-400">{item.commit}</span></p>
               </div>
             ))}
           </div>
         </div>
         <div className="card">
           <p className="text-gray-400 text-center">
-            Each improvement is a commit. Your demo gets better after every customer interaction — and the history tells the story.
+            Each improvement becomes a commit automatically. Your demo gets better after every customer interaction — and the history tells the story.
           </p>
         </div>
       </div>
@@ -289,14 +319,14 @@ const slides = [
         <h2 className="text-4xl font-bold mb-6">Practical tips</h2>
         <div className="grid md:grid-cols-2 gap-4">
           <div className="card">
-            <h3 className="text-rose-400 font-semibold mb-3">Commit often with Claude Code</h3>
-            <p className="text-gray-400 text-sm mb-2">After each working change, commit immediately:</p>
+            <h3 className="text-rose-400 font-semibold mb-3">Say "commit" after each step</h3>
+            <p className="text-gray-400 text-sm mb-2">After each working change, tell Claude Code to commit:</p>
             <div className="code-block !p-3 text-sm">
-              <p className="text-gray-300">Add the product search endpoint</p>
+              <p className="text-gray-200 italic">"Add the product search endpoint"</p>
               <p className="text-gray-500 mt-1"># Claude Code builds it, you test it</p>
-              <p className="text-rose-400 mt-1">git add . && git commit -m "Add product search"</p>
+              <p className="text-gray-200 italic mt-1">"Looks good, commit this"</p>
             </div>
-            <p className="text-gray-500 text-xs mt-2">If the next change breaks something, you can revert to here.</p>
+            <p className="text-gray-500 text-xs mt-2">If the next change breaks something, say "undo last commit".</p>
           </div>
           <div className="card">
             <h3 className="text-rose-400 font-semibold mb-3">Use .env for secrets</h3>
@@ -322,12 +352,12 @@ const slides = [
           </div>
           <div className="card">
             <h3 className="text-rose-400 font-semibold mb-3">Branch per experiment</h3>
-            <p className="text-gray-400 text-sm mb-2">Trying something risky? Branch first:</p>
+            <p className="text-gray-400 text-sm mb-2">Trying something risky? Tell Claude Code:</p>
             <div className="code-block !p-3 text-sm">
-              <p className="text-rose-400">git checkout -b experiment/voice-ui</p>
-              <p className="text-gray-500 mt-1"># Let Claude Code try the idea</p>
-              <p className="text-gray-500"># Doesn't work? Just switch back:</p>
-              <p className="text-rose-400">git checkout main</p>
+              <p className="text-gray-200 italic">"Create a branch called experiment/voice-ui</p>
+              <p className="text-gray-200 italic">and try adding a voice interface"</p>
+              <p className="text-gray-500 mt-2"># Doesn't work?</p>
+              <p className="text-gray-200 italic">"Switch back to main and delete that branch"</p>
             </div>
           </div>
         </div>
@@ -386,28 +416,29 @@ const slides = [
     content: () => (
       <div className="flex flex-col justify-center h-full px-8 md:px-16 max-w-5xl mx-auto">
         <h2 className="text-4xl font-bold mb-6">Full example: start to share</h2>
-        <p className="text-gray-400 mb-4">Building a new demo from scratch and sharing it with the team:</p>
+        <p className="text-gray-400 mb-4">An entire session — you only type the plain-English parts:</p>
         <div className="space-y-2">
           {[
-            { step: '1', cmd: 'mkdir commerce-agent-demo && cd commerce-agent-demo', note: 'Create project folder' },
-            { step: '2', cmd: 'git init', note: 'Initialize Git tracking' },
-            { step: '3', cmd: 'claude', note: 'Start Claude Code' },
-            { step: '4', cmd: '"Build me a commerce agent demo with..."', note: 'Describe what you need' },
-            { step: '5', cmd: 'git add . && git commit -m "Initial demo app"', note: 'Save the first version' },
-            { step: '6', cmd: 'gh repo create commerce-agent-demo --public --push', note: 'Create GitHub repo & push' },
-            { step: '7', cmd: '"Add a returns FAQ to the agent"', note: 'Keep improving with Claude Code' },
-            { step: '8', cmd: 'git add . && git commit -m "Add returns FAQ" && git push', note: 'Share improvements' },
+            { step: '1', who: 'you', text: 'mkdir commerce-agent-demo && cd commerce-agent-demo && claude' },
+            { step: '2', who: 'you', text: '"Create a commerce agent demo with a chat UI, product search, and sample data. Make it run with npm start."' },
+            { step: '3', who: 'claude', text: 'Creates files, installs deps, verifies it runs' },
+            { step: '4', who: 'you', text: '"Create a GitHub repo for this and push everything"' },
+            { step: '5', who: 'claude', text: 'Runs git init, gh repo create, commits, pushes' },
+            { step: '6', who: 'you', text: '"Add a returns FAQ to the agent knowledge base"' },
+            { step: '7', who: 'claude', text: 'Edits code, tests it' },
+            { step: '8', who: 'you', text: '"Commit and push"' },
+            { step: '9', who: 'claude', text: 'git add . && git commit -m "Add returns FAQ" && git push' },
           ].map((item) => (
             <div key={item.step} className="flex items-center gap-3">
               <span className="w-6 h-6 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center font-mono text-xs shrink-0">{item.step}</span>
-              <code className="text-rose-400 font-mono text-xs md:text-sm flex-1">{item.cmd}</code>
-              <span className="text-gray-500 text-xs hidden md:block">{item.note}</span>
+              <span className={`px-2 py-0.5 rounded text-xs font-mono shrink-0 ${item.who === 'you' ? 'bg-rose-500/20 text-rose-400' : 'bg-emerald-500/20 text-emerald-400'}`}>{item.who === 'you' ? 'you' : 'claude'}</span>
+              <span className={`text-xs md:text-sm ${item.who === 'you' ? 'text-gray-200 italic' : 'text-gray-500'}`}>{item.text}</span>
             </div>
           ))}
         </div>
         <div className="card mt-6">
           <p className="text-gray-400 text-center text-sm">
-            Your colleague can now <code className="bg-gray-700 px-1 rounded">git clone</code> your repo, run <code className="bg-gray-700 px-1 rounded">npm install && npm start</code>, and present the demo.
+            Your colleague can now clone the repo, run <code className="bg-gray-700 px-1 rounded">npm install && npm start</code>, and present the demo.
           </p>
         </div>
       </div>
@@ -475,12 +506,12 @@ const slides = [
           </div>
         </div>
         <div className="card max-w-lg">
-          <h3 className="text-lg font-semibold text-gray-200 mb-2">Your workflow</h3>
+          <h3 className="text-lg font-semibold text-gray-200 mb-2">Everything through conversation</h3>
           <div className="text-left text-sm space-y-1">
-            <p><code className="text-rose-400">claude</code> <span className="text-gray-500">— describe what you want built</span></p>
-            <p><code className="text-rose-400">git add . && git commit</code> <span className="text-gray-500">— save each working state</span></p>
-            <p><code className="text-rose-400">git push</code> <span className="text-gray-500">— share with the team</span></p>
-            <p><code className="text-rose-400">git checkout -b customer/x</code> <span className="text-gray-500">— customize per customer</span></p>
+            <p><span className="text-gray-200 italic">"Build me a demo that..."</span> <span className="text-gray-500">— creates the app</span></p>
+            <p><span className="text-gray-200 italic">"Commit and push this"</span> <span className="text-gray-500">— handles all the Git</span></p>
+            <p><span className="text-gray-200 italic">"Create a branch for ACME"</span> <span className="text-gray-500">— customer variations</span></p>
+            <p><span className="text-gray-200 italic">"Open a PR for this"</span> <span className="text-gray-500">— team collaboration</span></p>
           </div>
         </div>
       </div>
