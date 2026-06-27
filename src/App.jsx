@@ -35,7 +35,7 @@ const presentations = [
   {
     id: 'hello-world',
     number: 3,
-    title: 'Hello World',
+    title: 'Hands-On: Hello World',
     description: 'Your very first GitHub repository — no experience needed',
     icon: '👋',
     duration: '5 min',
@@ -83,7 +83,7 @@ const presentations = [
   {
     id: 'hands-on-claude-code',
     number: 7,
-    title: 'Hands-On: Hello World',
+    title: 'Hands-On: Claude Code',
     description: 'Follow along — create your first repo with Claude Code',
     icon: '🛠️',
     duration: '5 min',
