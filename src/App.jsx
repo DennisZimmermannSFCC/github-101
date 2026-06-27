@@ -7,6 +7,7 @@ import HelloWorld from './presentations/HelloWorld'
 import WorkingLocally from './presentations/WorkingLocally'
 import Branches from './presentations/Branches'
 import Issues from './presentations/Issues'
+import HandsOnIssues from './presentations/HandsOnIssues'
 import ClaudeCode from './presentations/ClaudeCode'
 import HandsOnClaudeCode from './presentations/HandsOnClaudeCode'
 
@@ -133,6 +134,17 @@ const sections = [
         color: 'from-orange-400 to-red-400',
         border: 'border-orange-500/30 hover:border-orange-500/60',
         component: Issues,
+      },
+      {
+        id: 'hands-on-issues',
+        title: 'Hands-On: Issues',
+        description: 'Follow along — create, discuss, and close an Issue',
+        icon: '✅',
+        duration: '5 min',
+        slides: 7,
+        color: 'from-orange-400 to-amber-400',
+        border: 'border-amber-500/30 hover:border-amber-500/60',
+        component: HandsOnIssues,
       },
       {
         id: 'claude-code',
