@@ -173,6 +173,28 @@ const slides = [
   },
 
   {
+    id: 'too-late',
+    content: () => (
+      <div className="flex flex-col items-center justify-center h-full px-8">
+        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white text-center">What if I added .gitignore too late?</h2>
+        <p className="text-xl text-gray-400 mb-6 text-center max-w-xl">
+          If a file was already committed, .gitignore won't remove it. Git still tracks it. You have to tell Git to stop tracking it:
+        </p>
+        <div className="code-block text-xl relative max-w-2xl w-full space-y-3">
+          <CopyButton text={"git rm --cached secrets.txt\ngit commit -m \"Remove secrets from tracking\"\ngit push"} />
+          <p className="text-emerald-400 font-mono">git rm --cached secrets.txt</p>
+          <p className="text-emerald-400 font-mono">git commit -m "Remove secrets from tracking"</p>
+          <p className="text-emerald-400 font-mono">git push</p>
+        </div>
+        <div className="mt-8 max-w-xl text-center space-y-3">
+          <p className="text-xl text-gray-400"><span className="text-emerald-400 font-mono">--cached</span> means: remove from Git, but keep the file on your computer.</p>
+          <p className="text-lg text-gray-500">After this, .gitignore takes over and Git ignores it from now on.</p>
+        </div>
+      </div>
+    ),
+  },
+
+  {
     id: 'done',
     content: () => (
       <div className="flex flex-col items-center justify-center h-full text-center px-8">
