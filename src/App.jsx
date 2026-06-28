@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import HandsOnHelloWorld from './presentations/HandsOnHelloWorld'
 import GitHubSetup from './presentations/GitHubSetup'
 import GitHub101 from './presentations/GitHub101'
 import GitHub102 from './presentations/GitHub102'
@@ -12,6 +13,10 @@ import HandsOnIssuesCLI from './presentations/HandsOnIssuesCLI'
 import HandsOnIssuesClaude from './presentations/HandsOnIssuesClaude'
 import ClaudeCode from './presentations/ClaudeCode'
 import HandsOnClaudeCode from './presentations/HandsOnClaudeCode'
+
+const newCourse = [
+  { id: 'hands-on-hello-world', title: 'Build a Website, Save it with Git', icon: '🌐', component: HandsOnHelloWorld },
+]
 
 const oldSections = [
   {
@@ -38,7 +43,7 @@ const oldSections = [
   },
 ]
 
-const allPresentations = oldSections.flatMap((s) => s.items)
+const allPresentations = [...newCourse, ...oldSections.flatMap((s) => s.items)]
 
 function HomePage({ onSelect }) {
   const [showOld, setShowOld] = useState(false)
@@ -50,8 +55,27 @@ function HomePage({ onSelect }) {
           GitHub for Pre-Sales
         </h1>
         <p className="text-lg text-gray-400 max-w-xl mx-auto">
-          Course redesign in progress.
+          Learn Git and GitHub step by step.
         </p>
+      </div>
+
+      <div className="max-w-5xl w-full">
+        <div className="mb-12">
+          {newCourse.map((p) => (
+            <button
+              key={p.id}
+              onClick={() => onSelect(p.id)}
+              className="card text-left border border-emerald-500/30 hover:border-emerald-500/60 transition-all duration-200 hover:scale-[1.01] hover:bg-gray-800/70 cursor-pointer group w-full max-w-xl mx-auto block"
+            >
+              <div className="text-4xl mb-3">{p.icon}</div>
+              <h2 className="text-2xl font-bold mb-2 text-white">{p.title}</h2>
+              <p className="text-gray-400">Hands-on: create 3 files, save each one with Git, push to GitHub</p>
+              <div className="mt-4 text-sm text-gray-500 group-hover:text-gray-300 transition-colors">
+                Start →
+              </div>
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="max-w-5xl w-full">
