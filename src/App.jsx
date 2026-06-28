@@ -6,6 +6,7 @@ import HandsOnGitHub from './presentations/HandsOnGitHub'
 import HandsOnPush from './presentations/HandsOnPush'
 import HandsOnShare from './presentations/HandsOnShare'
 import HandsOnUse from './presentations/HandsOnUse'
+import HandsOnBranch from './presentations/HandsOnBranch'
 import GitHubSetup from './presentations/GitHubSetup'
 import GitHub101 from './presentations/GitHub101'
 import GitHub102 from './presentations/GitHub102'
@@ -45,7 +46,13 @@ const newCourse = [
   {
     title: '104 — Using a Shared Repo',
     items: [
-      { id: 'hands-on-use', title: 'Use a Shared Repo', subtitle: 'Hands-on: clone, customize for your prospect, push back', icon: '🔄', component: HandsOnUse },
+      { id: 'hands-on-use', title: 'Use a Shared Repo', subtitle: 'Hands-on: clone a shared repo, explore the files', icon: '🔄', component: HandsOnUse },
+    ],
+  },
+  {
+    title: '201 — Branches',
+    items: [
+      { id: 'hands-on-branch', title: 'Customize Without Breaking', subtitle: 'Hands-on: create a branch, customize for your prospect, keep the original safe', icon: '🌿', component: HandsOnBranch },
     ],
   },
 ]

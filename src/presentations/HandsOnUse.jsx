@@ -92,69 +92,18 @@ const slides = [
   },
 
   {
-    id: 'step-3-customize',
-    content: () => (
-      <div className="flex flex-col items-center justify-center h-full px-8">
-        <div className="flex items-center gap-3 mb-2">
-          <span className="text-2xl">👩</span>
-          <span className="text-cyan-400 font-semibold text-lg">Elvira</span>
-        </div>
-        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white text-center">Step 3: Customize for your prospect</h2>
-        <p className="text-xl text-gray-400 mb-6 text-center">Open <span className="text-emerald-400 font-mono">index.html</span> in your editor. Change it:</p>
-        <div className="code-block text-lg relative max-w-2xl w-full">
-          <CopyButton text={'<!DOCTYPE html>\n<html>\n<head>\n  <title>Demo for ACME Corp</title>\n  <link rel="stylesheet" href="style.css">\n</head>\n<body>\n  <h1>Welcome ACME Corp!</h1>\n  <p>This demo shows how our product solves your logistics challenge.</p>\n</body>\n</html>'} />
-          <p className="text-gray-400">{"<!DOCTYPE html>"}</p>
-          <p className="text-gray-400">{"<html>"}</p>
-          <p className="text-gray-400">{"<head>"}</p>
-          <p className="text-cyan-400">{"  <title>Demo for ACME Corp</title>"}</p>
-          <p className="text-gray-400">{'  <link rel="stylesheet" href="style.css">'}</p>
-          <p className="text-gray-400">{"</head>"}</p>
-          <p className="text-gray-400">{"<body>"}</p>
-          <p className="text-cyan-400">{"  <h1>Welcome ACME Corp!</h1>"}</p>
-          <p className="text-cyan-400">{"  <p>This demo shows how our product solves your logistics challenge.</p>"}</p>
-          <p className="text-gray-400">{"</body>"}</p>
-          <p className="text-gray-400">{"</html>"}</p>
-        </div>
-        <p className="text-lg text-gray-500 mt-4">Save it.</p>
-      </div>
-    ),
-  },
-
-  {
-    id: 'step-4-save',
-    content: () => (
-      <div className="flex flex-col items-center justify-center h-full px-8">
-        <div className="flex items-center gap-3 mb-2">
-          <span className="text-2xl">👩</span>
-          <span className="text-cyan-400 font-semibold text-lg">Elvira</span>
-        </div>
-        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white text-center">Step 4: Save your changes</h2>
-        <div className="code-block text-2xl relative max-w-2xl w-full space-y-3">
-          <CopyButton text={"git add .\ngit commit -m \"Customize for ACME Corp\"\ngit push"} />
-          <p className="text-cyan-400 font-mono">git add .</p>
-          <p className="text-cyan-400 font-mono">git commit -m "Customize for ACME Corp"</p>
-          <p className="text-cyan-400 font-mono">git push</p>
-        </div>
-        <p className="text-xl text-gray-400 mt-8 text-center max-w-xl">
-          Your customization is saved and pushed to GitHub.
-        </p>
-      </div>
-    ),
-  },
-
-  {
-    id: 'what-happened',
+    id: 'what-now',
     content: () => (
       <div className="flex flex-col items-center justify-center h-full text-center px-8">
-        <h2 className="text-4xl md:text-5xl font-bold mb-10 text-white">What you did</h2>
-        <div className="space-y-6 text-2xl max-w-lg text-left">
-          <p className="text-gray-300"><span className="text-cyan-400">✓</span> Cloned a shared repo</p>
-          <p className="text-gray-300"><span className="text-cyan-400">✓</span> Looked at the files</p>
-          <p className="text-gray-300"><span className="text-cyan-400">✓</span> Customized it for your prospect</p>
-          <p className="text-gray-300"><span className="text-cyan-400">✓</span> Saved and pushed</p>
-        </div>
-        <p className="text-xl text-gray-500 mt-10 max-w-md">
-          You didn't start from scratch. You reused someone else's work and made it your own.
+        <h2 className="text-4xl md:text-5xl font-bold mb-10 text-white">Now what?</h2>
+        <p className="text-2xl text-gray-300 max-w-xl mb-8">
+          You want to customize this for your prospect ACME Corp. But you can't just change the original — other people use it too.
+        </p>
+        <p className="text-2xl text-gray-400 max-w-xl">
+          You need a way to make your own version without breaking theirs.
+        </p>
+        <p className="text-xl text-gray-500 mt-10">
+          That's what <span className="text-teal-400 font-semibold">branches</span> are for. → Next lesson.
         </p>
       </div>
     ),
@@ -168,10 +117,10 @@ const slides = [
           Done!
         </h1>
         <p className="text-2xl text-gray-400 max-w-lg">
-          You took a colleague's demo, customized it for ACME Corp, and pushed it back. That's reusability.
+          You cloned a shared repo and explored it. You're ready to work with it — without overwriting the original.
         </p>
         <p className="text-xl text-gray-600 mt-6">
-          Clone → Customize → Push. Every time.
+          Next: learn branches to safely customize.
         </p>
       </div>
     ),
