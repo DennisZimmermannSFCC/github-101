@@ -173,6 +173,31 @@ const slides = [
   },
 
   {
+    id: 'step-6',
+    content: () => (
+      <div className="flex flex-col items-center justify-center h-full px-8">
+        <div className="flex items-center gap-3 mb-2">
+          <span className="text-2xl">👩</span>
+          <span className="text-cyan-400 font-semibold text-lg">Elvira</span>
+        </div>
+        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white text-center">Step 6: Push your branch to GitHub</h2>
+        <div className="code-block text-2xl relative max-w-2xl w-full space-y-3">
+          <CopyButton text={"git checkout customer/acme-corp\ngit push -u origin customer/acme-corp"} />
+          <p className="text-teal-400 font-mono">git checkout customer/acme-corp</p>
+          <p className="text-teal-400 font-mono">git push -u origin customer/acme-corp</p>
+        </div>
+        <p className="text-xl text-gray-400 mt-8 text-center max-w-xl">
+          Your branch is now on GitHub too.<br />
+          Main is still untouched. Both live side by side online.
+        </p>
+        <p className="text-lg text-gray-500 mt-4 text-center">
+          Go to your repo on GitHub — you'll see a "2 branches" indicator.
+        </p>
+      </div>
+    ),
+  },
+
+  {
     id: 'many-branches',
     content: () => (
       <div className="flex flex-col items-center justify-center h-full text-center px-8">
@@ -204,6 +229,7 @@ const slides = [
           <p><span className="text-teal-400 font-mono">git checkout -b name</span> = create a branch</p>
           <p><span className="text-teal-400 font-mono">git diff main</span> = see what's different</p>
           <p><span className="text-teal-400 font-mono">git checkout main</span> = back to original</p>
+          <p><span className="text-teal-400 font-mono">git push -u origin name</span> = push branch to GitHub</p>
         </div>
       </div>
     ),
