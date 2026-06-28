@@ -130,6 +130,26 @@ const slides = [
   },
 
   {
+    id: 'step-5',
+    content: () => (
+      <div className="flex flex-col items-center justify-center h-full px-8">
+        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white text-center">Step 5: Push to GitHub</h2>
+        <div className="code-block text-2xl relative max-w-2xl w-full">
+          <CopyButton text={"git push"} />
+          <p className="text-emerald-400 font-mono">git push</p>
+        </div>
+        <p className="text-xl text-gray-400 mt-8 text-center max-w-xl">
+          Your .gitignore is now on GitHub.<br />
+          Everyone who clones the repo gets it — so they ignore the same files.
+        </p>
+        <p className="text-lg text-gray-500 mt-4 text-center">
+          secrets.txt? Not there. GitHub never sees it. Ever.
+        </p>
+      </div>
+    ),
+  },
+
+  {
     id: 'common-ignores',
     content: () => (
       <div className="flex flex-col items-center justify-center h-full px-8">
@@ -160,10 +180,11 @@ const slides = [
           Done!
         </h1>
         <p className="text-2xl text-gray-400 max-w-lg">
-          Files in .gitignore will never be committed or pushed. Your secrets stay secret.
+          Files in .gitignore will never be committed or pushed to GitHub. Your secrets stay secret.
         </p>
         <div className="mt-10 space-y-2 text-xl text-gray-500">
           <p>Rule: if it's secret, generated, or huge → ignore it.</p>
+          <p>The .gitignore itself gets pushed — so your whole team benefits.</p>
         </div>
       </div>
     ),
