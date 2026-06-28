@@ -7,6 +7,7 @@ import HandsOnPush from './presentations/HandsOnPush'
 import HandsOnShare from './presentations/HandsOnShare'
 import HandsOnUse from './presentations/HandsOnUse'
 import HandsOnBranch from './presentations/HandsOnBranch'
+import HandsOnBranchEdit from './presentations/HandsOnBranchEdit'
 import GitHubSetup from './presentations/GitHubSetup'
 import GitHub101 from './presentations/GitHub101'
 import GitHub102 from './presentations/GitHub102'
@@ -52,7 +53,8 @@ const newCourse = [
   {
     title: '201 — Branches',
     items: [
-      { id: 'hands-on-branch', title: 'Customize Without Breaking', subtitle: 'Hands-on: create a branch, customize for your prospect, keep the original safe', icon: '🌿', component: HandsOnBranch },
+      { id: 'hands-on-branch', title: 'Customize Without Breaking', subtitle: 'Hands-on: create a branch, keep the original safe', icon: '🌿', component: HandsOnBranch },
+      { id: 'hands-on-branch-edit', title: 'Edit and Compare', subtitle: 'Hands-on: change a file on your branch, see the diff to main', icon: '🔍', component: HandsOnBranchEdit },
     ],
   },
 ]
