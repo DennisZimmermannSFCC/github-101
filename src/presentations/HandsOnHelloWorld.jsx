@@ -173,27 +173,10 @@ const slides = [
   },
 
   {
-    id: 'step-8-save-css',
+    id: 'step-8-readme',
     content: () => (
       <div className="flex flex-col items-center justify-center h-full px-8">
-        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white text-center">Step 8: Save the CSS</h2>
-        <div className="code-block text-2xl relative max-w-2xl w-full space-y-4">
-          <CopyButton text={"git add style.css\ngit commit -m \"Add styling\""} />
-          <p className="text-emerald-400 font-mono">git add style.css</p>
-          <p className="text-emerald-400 font-mono">git commit -m "Add styling"</p>
-        </div>
-        <p className="text-xl text-gray-400 mt-8 text-center">
-          Second save! Your project now has 2 snapshots in history.
-        </p>
-      </div>
-    ),
-  },
-
-  {
-    id: 'step-9-readme',
-    content: () => (
-      <div className="flex flex-col items-center justify-center h-full px-8">
-        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white text-center">Step 9: Create README.md</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white text-center">Step 8: Create README.md</h2>
         <p className="text-xl text-gray-400 mb-4 text-center">Create a file called <span className="text-amber-400 font-mono">README.md</span>:</p>
         <div className="code-block text-lg relative max-w-2xl w-full">
           <CopyButton text={"# My Website\n\nA simple hello world page to learn Git.\n\n## How to open\n\nOpen index.html in your browser."} />
@@ -202,23 +185,44 @@ const slides = [
           <p className="text-amber-400 mt-2">## How to open</p>
           <p className="text-gray-400 mt-1">Open index.html in your browser.</p>
         </div>
-        <p className="text-lg text-gray-500 mt-4">This is the "front page" people see on GitHub.</p>
+        <p className="text-lg text-gray-500 mt-4">Save it.</p>
       </div>
     ),
   },
 
   {
-    id: 'step-10-save-readme',
+    id: 'step-9-add-all',
     content: () => (
       <div className="flex flex-col items-center justify-center h-full px-8">
-        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white text-center">Step 10: Save the README</h2>
-        <div className="code-block text-2xl relative max-w-2xl w-full space-y-4">
-          <CopyButton text={"git add README.md\ngit commit -m \"Add README\""} />
-          <p className="text-emerald-400 font-mono">git add README.md</p>
-          <p className="text-emerald-400 font-mono">git commit -m "Add README"</p>
+        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white text-center">Step 9: Add ALL files at once</h2>
+        <div className="code-block text-2xl relative max-w-2xl w-full">
+          <CopyButton text={"git add ."} />
+          <p className="text-emerald-400 font-mono">git add .</p>
+        </div>
+        <p className="text-xl text-gray-400 mt-8 text-center max-w-xl">
+          The dot means "everything."<br />
+          This adds style.css AND README.md in one go.
+        </p>
+        <div className="mt-8 max-w-md mx-auto text-left">
+          <p className="text-gray-500 text-lg mb-2">Two ways to add:</p>
+          <p className="font-mono text-lg"><span className="text-emerald-400">git add style.css</span> <span className="text-gray-600">= one file</span></p>
+          <p className="font-mono text-lg"><span className="text-emerald-400">git add .</span> <span className="text-gray-600">= everything</span></p>
+        </div>
+      </div>
+    ),
+  },
+
+  {
+    id: 'step-10-commit-all',
+    content: () => (
+      <div className="flex flex-col items-center justify-center h-full px-8">
+        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white text-center">Step 10: Save both files</h2>
+        <div className="code-block text-2xl relative max-w-2xl w-full">
+          <CopyButton text={'git commit -m "Add styling and README"'} />
+          <p className="text-emerald-400 font-mono">git commit -m "Add styling and README"</p>
         </div>
         <p className="text-xl text-gray-400 mt-8 text-center">
-          Third save! Three snapshots in history.
+          Both files are saved together in one snapshot.
         </p>
       </div>
     ),
@@ -234,31 +238,88 @@ const slides = [
           <p className="text-emerald-400 font-mono">git log --oneline</p>
         </div>
         <div className="mt-8 max-w-xl text-center">
-          <p className="text-xl text-gray-400 mb-4">You'll see something like:</p>
+          <p className="text-xl text-gray-400 mb-4">You'll see:</p>
           <div className="code-block text-lg text-left">
-            <p><span className="text-amber-400">c3d4e5f</span> <span className="text-gray-300">Add README</span></p>
-            <p><span className="text-amber-400">b2c3d4e</span> <span className="text-gray-300">Add styling</span></p>
+            <p><span className="text-amber-400">b2c3d4e</span> <span className="text-gray-300">Add styling and README</span></p>
             <p><span className="text-amber-400">a1b2c3d</span> <span className="text-gray-300">Add hello world page</span></p>
           </div>
-          <p className="text-lg text-gray-500 mt-4">Every save you made, with its message. You can go back to any of these.</p>
+          <p className="text-lg text-gray-500 mt-4">Two saves. You can go back to either one.</p>
         </div>
       </div>
     ),
   },
 
   {
-    id: 'step-12-push',
+    id: 'step-12-break',
     content: () => (
       <div className="flex flex-col items-center justify-center h-full px-8">
-        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white text-center">Step 12: Push to GitHub</h2>
-        <div className="code-block text-xl relative max-w-2xl w-full space-y-4">
-          <CopyButton text={"gh repo create my-website --private --source=. --push"} />
-          <p className="text-emerald-400 font-mono">gh repo create my-website --private --source=. --push</p>
+        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white text-center">Step 12: Break something</h2>
+        <p className="text-xl text-gray-400 mb-6 text-center">Open <span className="text-emerald-400 font-mono">index.html</span> and delete everything inside. Replace it with:</p>
+        <div className="code-block text-2xl relative max-w-2xl w-full">
+          <CopyButton text={"oops I deleted everything"} />
+          <p className="text-red-400 font-mono">oops I deleted everything</p>
+        </div>
+        <p className="text-xl text-gray-400 mt-8 text-center">
+          Save the file. Your website is now broken.
+        </p>
+        <p className="text-2xl text-gray-500 mt-4 text-center">
+          Don't worry.
+        </p>
+      </div>
+    ),
+  },
+
+  {
+    id: 'step-13-go-back',
+    content: () => (
+      <div className="flex flex-col items-center justify-center h-full px-8">
+        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white text-center">Step 13: Go back in time</h2>
+        <div className="code-block text-2xl relative max-w-2xl w-full">
+          <CopyButton text={"git checkout -- index.html"} />
+          <p className="text-emerald-400 font-mono">git checkout -- index.html</p>
         </div>
         <p className="text-xl text-gray-400 mt-8 text-center max-w-xl">
-          This creates a repo on GitHub and uploads everything.<br />
-          Open the URL it shows — your website is online!
+          Open index.html again.<br />
+          It's back! The "Hello World" page is restored.
         </p>
+        <p className="text-2xl text-emerald-400 mt-6 text-center font-semibold">
+          Git remembered it for you.
+        </p>
+      </div>
+    ),
+  },
+
+  {
+    id: 'explain-go-back',
+    content: () => (
+      <div className="flex flex-col items-center justify-center h-full px-8">
+        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white text-center">How "going back" works</h2>
+        <div className="space-y-6 max-w-2xl w-full text-xl">
+          <div className="flex items-start gap-4">
+            <span className="text-2xl">🗑️</span>
+            <div>
+              <p className="text-gray-200 font-semibold">Undo changes to one file</p>
+              <p className="text-emerald-400 font-mono text-lg mt-1">git checkout -- filename</p>
+              <p className="text-gray-500 text-base">Restores the file to its last saved version</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <span className="text-2xl">⏪</span>
+            <div>
+              <p className="text-gray-200 font-semibold">See an old save (time travel)</p>
+              <p className="text-emerald-400 font-mono text-lg mt-1">git checkout a1b2c3d</p>
+              <p className="text-gray-500 text-base">Use the code from git log to visit any snapshot</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <span className="text-2xl">🏠</span>
+            <div>
+              <p className="text-gray-200 font-semibold">Come back to the latest</p>
+              <p className="text-emerald-400 font-mono text-lg mt-1">git checkout main</p>
+              <p className="text-gray-500 text-base">Return to where you were</p>
+            </div>
+          </div>
+        </div>
       </div>
     ),
   },
@@ -272,14 +333,16 @@ const slides = [
           {[
             { cmd: 'git init', desc: 'start tracking a folder' },
             { cmd: 'git status', desc: 'see what changed' },
-            { cmd: 'git add filename', desc: 'pick a file to save' },
+            { cmd: 'git add filename', desc: 'pick one file to save' },
             { cmd: 'git add .', desc: 'pick ALL files to save' },
             { cmd: 'git commit -m "msg"', desc: 'save a snapshot' },
-            { cmd: 'git log --oneline', desc: 'see all saved snapshots' },
-            { cmd: 'git push', desc: 'upload to GitHub' },
+            { cmd: 'git log --oneline', desc: 'see all snapshots' },
+            { cmd: 'git checkout -- file', desc: 'undo changes to a file' },
+            { cmd: 'git checkout abc123', desc: 'go back to an old save' },
+            { cmd: 'git checkout main', desc: 'come back to latest' },
           ].map((item) => (
             <div key={item.cmd} className="flex items-center gap-4">
-              <code className="text-emerald-400 font-mono w-64 shrink-0">{item.cmd}</code>
+              <code className="text-emerald-400 font-mono w-72 shrink-0">{item.cmd}</code>
               <span className="text-gray-400">= {item.desc}</span>
             </div>
           ))}
@@ -296,12 +359,12 @@ const slides = [
           You did it!
         </h1>
         <p className="text-2xl text-gray-400 max-w-lg">
-          You built a website, saved it step by step, and pushed it to GitHub.
+          You built a website, saved it step by step, broke it, and brought it back.
         </p>
         <div className="mt-12 space-y-2 text-xl text-gray-500">
           <p>3 files created</p>
-          <p>3 commits saved</p>
-          <p>1 repo on GitHub</p>
+          <p>2 commits saved</p>
+          <p>1 undo — like magic</p>
         </div>
       </div>
     ),
