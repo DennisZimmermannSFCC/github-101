@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import WhatIsGit from './presentations/WhatIsGit'
 import HandsOnHelloWorld from './presentations/HandsOnHelloWorld'
 import GitHubSetup from './presentations/GitHubSetup'
 import GitHub101 from './presentations/GitHub101'
@@ -15,7 +16,8 @@ import ClaudeCode from './presentations/ClaudeCode'
 import HandsOnClaudeCode from './presentations/HandsOnClaudeCode'
 
 const newCourse = [
-  { id: 'hands-on-hello-world', title: 'Build a Website, Save it with Git', icon: '🌐', component: HandsOnHelloWorld },
+  { id: 'what-is-git', title: 'Git & GitHub', subtitle: 'What they are, why they matter', icon: '💡', component: WhatIsGit },
+  { id: 'hands-on-hello-world', title: 'Build a Website, Save it with Git', subtitle: 'Hands-on: create files, save with Git, undo mistakes', icon: '🌐', component: HandsOnHelloWorld },
 ]
 
 const oldSections = [
@@ -59,20 +61,21 @@ function HomePage({ onSelect }) {
         </p>
       </div>
 
-      <div className="max-w-5xl w-full">
-        <div className="mb-12">
-          {newCourse.map((p) => (
+      <div className="max-w-3xl w-full">
+        <div className="mb-12 space-y-4">
+          {newCourse.map((p, i) => (
             <button
               key={p.id}
               onClick={() => onSelect(p.id)}
-              className="card text-left border border-emerald-500/30 hover:border-emerald-500/60 transition-all duration-200 hover:scale-[1.01] hover:bg-gray-800/70 cursor-pointer group w-full max-w-xl mx-auto block"
+              className="card text-left border border-gray-700/50 hover:border-gray-500/60 transition-all duration-200 hover:scale-[1.01] hover:bg-gray-800/70 cursor-pointer group w-full flex items-center gap-5"
             >
-              <div className="text-4xl mb-3">{p.icon}</div>
-              <h2 className="text-2xl font-bold mb-2 text-white">{p.title}</h2>
-              <p className="text-gray-400">Hands-on: create 3 files, save each one with Git, push to GitHub</p>
-              <div className="mt-4 text-sm text-gray-500 group-hover:text-gray-300 transition-colors">
-                Start →
+              <span className="text-4xl">{p.icon}</span>
+              <div className="flex-1">
+                <span className="text-xs font-mono text-gray-600">{i + 1}/{newCourse.length}</span>
+                <h2 className="text-xl font-bold text-white">{p.title}</h2>
+                <p className="text-gray-500 text-sm">{p.subtitle}</p>
               </div>
+              <span className="text-sm text-gray-600 group-hover:text-gray-300 transition-colors">Start →</span>
             </button>
           ))}
         </div>
