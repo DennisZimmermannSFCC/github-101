@@ -20,13 +20,30 @@ import ClaudeCode from './presentations/ClaudeCode'
 import HandsOnClaudeCode from './presentations/HandsOnClaudeCode'
 
 const newCourse = [
-  { id: 'what-is-git', title: 'Git & GitHub', subtitle: 'What they are, why they matter', icon: '💡', component: WhatIsGit },
-  { id: 'setup', title: 'Setup', subtitle: 'Install Git, create a GitHub account, connect them', icon: '⚙️', component: Setup },
-  { id: 'hands-on-hello-world', title: 'Build a Website, Save it with Git', subtitle: 'Hands-on: create files, save with Git, undo mistakes', icon: '🌐', component: HandsOnHelloWorld },
-  { id: 'hands-on-github', title: 'Your First Repo on GitHub', subtitle: 'Hands-on: create a repo, add files, see history — all in the browser', icon: '🌐', component: HandsOnGitHub },
-  { id: 'hands-on-push', title: 'Put Your Project on GitHub', subtitle: 'Hands-on: push your local project to GitHub from the terminal', icon: '⬆️', component: HandsOnPush },
-  { id: 'hands-on-share', title: 'Share with a Colleague', subtitle: 'Hands-on: invite someone so they can see and clone your project', icon: '🤝', component: HandsOnShare },
+  {
+    title: '101 — Getting Started',
+    items: [
+      { id: 'what-is-git', title: 'Git & GitHub', subtitle: 'What they are, why they matter', icon: '💡', component: WhatIsGit },
+      { id: 'setup', title: 'Setup', subtitle: 'Install Git, create a GitHub account, connect them', icon: '⚙️', component: Setup },
+    ],
+  },
+  {
+    title: '102 — Working with Files',
+    items: [
+      { id: 'hands-on-hello-world', title: 'Build a Website, Save it with Git', subtitle: 'Hands-on: create files, save with Git, undo mistakes', icon: '🌐', component: HandsOnHelloWorld },
+      { id: 'hands-on-github', title: 'Your First Repo on GitHub', subtitle: 'Hands-on: create a repo, add files, see history — all in the browser', icon: '🌐', component: HandsOnGitHub },
+    ],
+  },
+  {
+    title: '103 — Sharing Your Work',
+    items: [
+      { id: 'hands-on-push', title: 'Put Your Project on GitHub', subtitle: 'Hands-on: push your local project to GitHub from the terminal', icon: '⬆️', component: HandsOnPush },
+      { id: 'hands-on-share', title: 'Share with a Colleague', subtitle: 'Hands-on: invite someone so they can see and clone your project', icon: '🤝', component: HandsOnShare },
+    ],
+  },
 ]
+
+const newCourseItems = newCourse.flatMap((s) => s.items)
 
 const oldSections = [
   {
@@ -53,7 +70,7 @@ const oldSections = [
   },
 ]
 
-const allPresentations = [...newCourse, ...oldSections.flatMap((s) => s.items)]
+const allPresentations = [...newCourseItems, ...oldSections.flatMap((s) => s.items)]
 
 function HomePage({ onSelect }) {
   const [showOld, setShowOld] = useState(false)
@@ -70,21 +87,29 @@ function HomePage({ onSelect }) {
       </div>
 
       <div className="max-w-3xl w-full">
-        <div className="mb-12 space-y-4">
-          {newCourse.map((p, i) => (
-            <button
-              key={p.id}
-              onClick={() => onSelect(p.id)}
-              className="card text-left border border-gray-700/50 hover:border-gray-500/60 transition-all duration-200 hover:scale-[1.01] hover:bg-gray-800/70 cursor-pointer group w-full flex items-center gap-5"
-            >
-              <span className="text-4xl">{p.icon}</span>
-              <div className="flex-1">
-                <span className="text-xs font-mono text-gray-600">{i + 1}/{newCourse.length}</span>
-                <h2 className="text-xl font-bold text-white">{p.title}</h2>
-                <p className="text-gray-500 text-sm">{p.subtitle}</p>
+        <div className="mb-12 space-y-8">
+          {newCourse.map((section) => (
+            <div key={section.title}>
+              <h2 className="text-sm font-mono uppercase tracking-wider text-gray-500 mb-3 px-1">
+                {section.title}
+              </h2>
+              <div className="space-y-3">
+                {section.items.map((p) => (
+                  <button
+                    key={p.id}
+                    onClick={() => onSelect(p.id)}
+                    className="card text-left border border-gray-700/50 hover:border-gray-500/60 transition-all duration-200 hover:scale-[1.01] hover:bg-gray-800/70 cursor-pointer group w-full flex items-center gap-5"
+                  >
+                    <span className="text-3xl">{p.icon}</span>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold text-white">{p.title}</h3>
+                      <p className="text-gray-500 text-sm">{p.subtitle}</p>
+                    </div>
+                    <span className="text-sm text-gray-600 group-hover:text-gray-300 transition-colors">Start →</span>
+                  </button>
+                ))}
               </div>
-              <span className="text-sm text-gray-600 group-hover:text-gray-300 transition-colors">Start →</span>
-            </button>
+            </div>
           ))}
         </div>
       </div>
