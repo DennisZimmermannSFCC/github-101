@@ -22,6 +22,7 @@ const slides = [
         <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white">The problem</h2>
         <div className="space-y-4 text-2xl text-gray-400 max-w-2xl text-left">
           <p>You build a great demo.</p>
+          <p>But where do you store it? Desktop? OneDrive? A random folder?</p>
           <p>A colleague asks for it. You email a ZIP.</p>
           <p>They improve it. You never get those changes back.</p>
           <p>You make your own changes. Now there are 2 versions.</p>
