@@ -29,6 +29,7 @@ const newCourse = [
     items: [
       { id: 'what-is-git', title: 'Git & GitHub', subtitle: 'What they are, why they matter', icon: '💡', component: WhatIsGit },
       { id: 'setup', title: 'Setup', subtitle: 'Install Git, create a GitHub account, connect them', icon: '⚙️', component: Setup },
+      { id: 'hands-on-claude-session', title: 'Shortcut: Let Claude Do It All', subtitle: 'Skip ahead — do the whole workflow by talking to Claude Code', icon: '⚡', component: HandsOnClaudeSession },
     ],
   },
   {
