@@ -8,6 +8,7 @@ import HandsOnShare from './presentations/HandsOnShare'
 import HandsOnUse from './presentations/HandsOnUse'
 import HandsOnBranch from './presentations/HandsOnBranch'
 import HandsOnGitignore from './presentations/HandsOnGitignore'
+import HandsOnClaudeSession from './presentations/HandsOnClaudeSession'
 import GitHubSetup from './presentations/GitHubSetup'
 import GitHub101 from './presentations/GitHub101'
 import GitHub102 from './presentations/GitHub102'
@@ -60,6 +61,12 @@ const newCourse = [
     title: '301 — Keeping It Clean',
     items: [
       { id: 'hands-on-gitignore', title: '.gitignore', subtitle: 'Hands-on: tell Git what NOT to save (secrets, junk, big folders)', icon: '🙈', component: HandsOnGitignore },
+    ],
+  },
+  {
+    title: '401 — Let Claude Do It',
+    items: [
+      { id: 'hands-on-claude-session', title: 'A Full Session with Claude Code', subtitle: 'Hands-on: build, push, branch, share, undo — all by talking', icon: '🤖', component: HandsOnClaudeSession },
     ],
   },
 ]
