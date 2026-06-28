@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import WhatIsGit from './presentations/WhatIsGit'
 import HandsOnHelloWorld from './presentations/HandsOnHelloWorld'
+import HandsOnGitHub from './presentations/HandsOnGitHub'
 import GitHubSetup from './presentations/GitHubSetup'
 import GitHub101 from './presentations/GitHub101'
 import GitHub102 from './presentations/GitHub102'
@@ -18,6 +19,7 @@ import HandsOnClaudeCode from './presentations/HandsOnClaudeCode'
 const newCourse = [
   { id: 'what-is-git', title: 'Git & GitHub', subtitle: 'What they are, why they matter', icon: '💡', component: WhatIsGit },
   { id: 'hands-on-hello-world', title: 'Build a Website, Save it with Git', subtitle: 'Hands-on: create files, save with Git, undo mistakes', icon: '🌐', component: HandsOnHelloWorld },
+  { id: 'hands-on-github', title: 'Your First Repo on GitHub', subtitle: 'Hands-on: create a repo, add files, see history — all in the browser', icon: '🌐', component: HandsOnGitHub },
 ]
 
 const oldSections = [
