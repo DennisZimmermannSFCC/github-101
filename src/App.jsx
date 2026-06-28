@@ -5,6 +5,7 @@ import HandsOnHelloWorld from './presentations/HandsOnHelloWorld'
 import HandsOnGitHub from './presentations/HandsOnGitHub'
 import HandsOnPush from './presentations/HandsOnPush'
 import HandsOnShare from './presentations/HandsOnShare'
+import HandsOnUse from './presentations/HandsOnUse'
 import GitHubSetup from './presentations/GitHubSetup'
 import GitHub101 from './presentations/GitHub101'
 import GitHub102 from './presentations/GitHub102'
@@ -39,6 +40,12 @@ const newCourse = [
     items: [
       { id: 'hands-on-push', title: 'Put Your Project on GitHub', subtitle: 'Hands-on: push your local project to GitHub from the terminal', icon: '⬆️', component: HandsOnPush },
       { id: 'hands-on-share', title: 'Share with a Colleague', subtitle: 'Hands-on: invite someone so they can see and clone your project', icon: '🤝', component: HandsOnShare },
+    ],
+  },
+  {
+    title: '104 — Using a Shared Repo',
+    items: [
+      { id: 'hands-on-use', title: 'Use a Shared Repo', subtitle: 'Hands-on: clone, customize for your prospect, push back', icon: '🔄', component: HandsOnUse },
     ],
   },
 ]
