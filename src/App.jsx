@@ -7,6 +7,7 @@ import HandsOnPush from './presentations/HandsOnPush'
 import HandsOnShare from './presentations/HandsOnShare'
 import HandsOnUse from './presentations/HandsOnUse'
 import HandsOnBranch from './presentations/HandsOnBranch'
+import HandsOnGitignore from './presentations/HandsOnGitignore'
 import GitHubSetup from './presentations/GitHubSetup'
 import GitHub101 from './presentations/GitHub101'
 import GitHub102 from './presentations/GitHub102'
@@ -53,6 +54,12 @@ const newCourse = [
     title: '201 — Branches',
     items: [
       { id: 'hands-on-branch', title: 'Customize Without Breaking', subtitle: 'Hands-on: create a branch, edit for ACME, compare to main', icon: '🌿', component: HandsOnBranch },
+    ],
+  },
+  {
+    title: '301 — Keeping It Clean',
+    items: [
+      { id: 'hands-on-gitignore', title: '.gitignore', subtitle: 'Hands-on: tell Git what NOT to save (secrets, junk, big folders)', icon: '🙈', component: HandsOnGitignore },
     ],
   },
 ]
