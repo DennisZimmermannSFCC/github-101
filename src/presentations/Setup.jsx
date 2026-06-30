@@ -33,13 +33,36 @@ const slides = [
   },
 
   {
+    id: 'two-githubs',
+    content: () => (
+      <div className="flex flex-col items-center justify-center h-full px-8">
+        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white text-center">Two GitHubs at Salesforce</h2>
+        <p className="text-lg text-gray-500 mb-8 text-center max-w-xl">Pick the one that matches who you're working with.</p>
+        <div className="grid md:grid-cols-2 gap-6 max-w-3xl w-full">
+          <div className="card">
+            <p className="text-emerald-400 font-mono text-lg mb-2">github.com</p>
+            <p className="text-gray-300 text-base mb-3">Public GitHub</p>
+            <p className="text-gray-500 text-sm">Use for collaboration <span className="text-gray-300">outside</span> Salesforce — e.g. POCs with customers or partners, open-source.</p>
+          </div>
+          <div className="card">
+            <p className="text-emerald-400 font-mono text-lg mb-2">git.soma.salesforce.com</p>
+            <p className="text-gray-300 text-base mb-3">Internal SF GitHub</p>
+            <p className="text-gray-500 text-sm">Use for <span className="text-gray-300">internal</span> Salesforce projects — code that stays inside the company. Log in with SSO.</p>
+          </div>
+        </div>
+        <p className="text-lg text-gray-600 mt-8 text-center">Same tools, same workflow. Just a different host.</p>
+      </div>
+    ),
+  },
+
+  {
     id: 'step-1-account',
     content: () => (
       <div className="flex flex-col items-center justify-center h-full px-8">
         <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white text-center">Step 1: Create a GitHub account</h2>
         <div className="max-w-xl w-full space-y-4 text-xl text-gray-300">
-          <p><span className="text-emerald-400 font-semibold">1.</span> Go to <span className="text-emerald-400 font-mono">github.com</span></p>
-          <p><span className="text-emerald-400 font-semibold">2.</span> Click "Sign up"</p>
+          <p><span className="text-emerald-400 font-semibold">1.</span> Go to <span className="text-emerald-400 font-mono">github.com</span> <span className="text-gray-500 text-base">(or <span className="text-emerald-400 font-mono">git.soma.salesforce.com</span> for internal)</span></p>
+          <p><span className="text-emerald-400 font-semibold">2.</span> Click "Sign up" <span className="text-gray-500 text-base">(internal: log in with SSO — no signup needed)</span></p>
           <p><span className="text-emerald-400 font-semibold">3.</span> Use your work email</p>
           <p><span className="text-emerald-400 font-semibold">4.</span> Pick a username (your name works)</p>
           <p><span className="text-emerald-400 font-semibold">5.</span> Create a password</p>
@@ -175,6 +198,11 @@ const slides = [
             <p className="text-gray-300">How? → <span className="text-emerald-400 font-semibold">Login with a web browser</span></p>
           </div>
           <p className="text-lg text-gray-500">It opens your browser. Log in and say yes.</p>
+          <div className="card text-left mt-4">
+            <p className="text-gray-400 text-sm">Working on an internal Salesforce project?</p>
+            <p className="text-gray-300 text-sm mt-1">Run <span className="text-emerald-400 font-mono">gh auth login --hostname git.soma.salesforce.com</span> and authenticate via SSO.</p>
+            <p className="text-gray-500 text-sm mt-1">You can be logged into both hosts at the same time.</p>
+          </div>
         </div>
       </div>
     ),
